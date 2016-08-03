@@ -39,6 +39,26 @@ conceived.
 
 <serviceproviders format="2.0">
 
+<!-- Andorra -->
+<country code="ad">
+	<provider>
+		<name>Andorra Telecom (Mobiland)</name>
+		<gsm>
+			<network-id mcc="213" mnc="03"/>
+			<apn value="internetand">
+				<plan type="postpaid"/>
+				<usage type="internet"/>
+				<name>Mobiland</name>
+			</apn>
+			<apn value="internetclic">
+				<plan type="prepaid"/>
+				<usage type="internet"/>
+				<name>Mobiland Click!</name>
+			</apn>
+		</gsm>
+	</provider>
+</country>
+
 <!-- United Arab Emirates -->
 <country code="ae">
 	<provider>
@@ -503,6 +523,28 @@ conceived.
 				<password>ppp</password>
 				<mmsc>http://mmsc.bob.at</mmsc>
 				<mmsproxy>194.48.124.7:8001</mmsproxy>
+			</apn>
+		</gsm>
+	</provider>
+	<provider>
+		<!-- https://www.hot.at/config/faqs/HoT_Einstellungen_Endgera_te.pdf -->
+		<name>HoT</name>
+		<gsm>
+			<network-id mcc="232" mnc="07"/>
+			<apn value="webaut">
+				<plan type="prepaid"/>
+				<usage type="internet"/>
+				<username></username>
+				<password></password>
+			</apn>
+			<apn value="mmsaut">
+				<plan type="prepaid"/>
+				<usage type="mms"/>
+				<name>HoT MMS</name>
+				<username></username>
+				<password></password>
+				<mmsc>http://mmsaut.at/send</mmsc>
+				<mmsproxy>212.95.31.50:80</mmsproxy>
 			</apn>
 		</gsm>
 	</provider>
@@ -1320,7 +1362,7 @@ conceived.
 		</gsm>
 	</provider>
 	<provider>
-		<name>Warid</name>
+		<name>Airtel (Warid)</name>
 		<gsm>
 			<network-id mcc="470" mnc="07"/>
 			<apn value="internet">
@@ -1334,6 +1376,24 @@ conceived.
 				<name>Airtel MMS</name>
 				<mmsc>http://10.6.0.21/servlets/mms</mmsc>
 				<mmsproxy>10.6.0.2:8080</mmsproxy>
+			</apn>
+		</gsm>
+	</provider>
+	<provider>
+		<!-- http://www.teletalk.com.bd/cpoint/3G/MMS_Internet_service.php -->
+		<name>Teletalk</name>
+		<gsm>
+			<network-id mcc="470" mnc="04"/>
+			<apn value="wap">
+				<plan type="prepaid"/>
+				<usage type="internet"/>
+				<name>Internet</name>
+			</apn>
+			<apn value="mms">
+				<usage type="mms"/>
+				<name>Airtel MMS</name>
+				<mmsc>http://10.5.4.22:38090/was</mmsc>
+				<mmsproxy>10.5.4.40:8080</mmsproxy>
 			</apn>
 		</gsm>
 	</provider>
@@ -2237,7 +2297,18 @@ conceived.
 		<cdma/>
 	</provider>
 	<provider>
-		<name>SaskTel</name>
+		<name>SaskTel Mobility</name>
+		<gsm>
+			<network-id mcc="302" mnc="680"/>
+			<network-id mcc="302" mnc="750"/>
+			<network-id mcc="302" mnc="780"/>
+			<network-id mcc="302" mnc="880"/>
+			<apn value="inet.stm.sk.ca">
+				<plan type="postpaid"/>
+				<usage type="internet"/>
+				<name>Data Device or Tethering</name>
+			</apn>
+		</gsm>
 		<cdma>
 			<sid value="16410"/>
 			<sid value="16412"/>
@@ -2352,6 +2423,12 @@ conceived.
 		<name>Orange</name>
 		<gsm>
 			<network-id mcc="228" mnc="03"/>
+			<balance-check>
+				<ussd>#121#</ussd>
+			</balance-check>
+			<balance-top-up>
+				<ussd replacement="CODE">#121*CODE#</ussd>
+			</balance-top-up>
 			<apn value="mobileoffice3g">
 				<plan type="postpaid"/>
 				<usage type="internet"/>
@@ -2588,6 +2665,41 @@ conceived.
 				<password>mms</password>
 				<mmsc>http://mms.dst.com.bn/mmsc</mmsc>
 				<mmsproxy>10.100.6.101:3130</mmsproxy>
+			</apn>
+		</gsm>
+	</provider>
+	<provider>
+		<!-- http://www.chw.net/foro/virgin/965115-apn-internet-movil-y-mms.html -->
+		<name>Virgin Mobile</name>
+		<gsm>
+			<network-id mcc="730" mnc="07"/>
+			<apn value="imovil.virginmobile.cl">
+				<plan type="postpaid"/>
+				<usage type="internet"/>
+			</apn>
+		</gsm>
+	</provider>
+	<provider>
+		<!-- http://www.chw.net/foro/vtr-movil/965343-apns-vtr-movil.html -->
+		<name>VTR Movil</name>
+		<gsm>
+			<network-id mcc="730" mnc="08"/>
+			<apn value="movil.vtr.com">
+				<plan type="postpaid"/>
+				<usage type="internet"/>
+				<username>vtrmovil</username>
+				<password>vtrmovil</password>
+			</apn>
+		</gsm>
+	</provider>
+	<provider>
+		<!-- http://www.nextel.cl/ayuda/apn/ -->
+		<name>Nextel</name>
+		<gsm>
+			<network-id mcc="730" mnc="09"/>
+			<apn value="wap.nextelmovil.cl">
+				<plan type="postpaid"/>
+				<usage type="internet"/>
 			</apn>
 		</gsm>
 	</provider>
@@ -3256,137 +3368,6 @@ conceived.
 		</gsm>
 	</provider>
 	<provider>
-		<!-- This configuration is valid for all vistream retailers like
-		     solomo, igge & ko, sdt.net, Südkurier-Tel etc.-->
-		<name>vistream</name>
-		<gsm>
-			<network-id mcc="262" mnc="16"/>
-			<balance-check>
-				<ussd>*100#</ussd>
-			</balance-check>
-			<apn value="internet.vistream.net">
-				<plan type="postpaid"/>
-				<usage type="internet"/>
-				<username>web</username>
-				<password>vistream</password>
-			</apn>
-		</gsm>
-	</provider>
-	<provider>
-		<name>solomo</name>
-		<gsm>
-			<network-id mcc="262" mnc="16"/>
-			<balance-check>
-				<ussd>*100#</ussd>
-			</balance-check>
-			<apn value="internet.vistream.net">
-				<plan type="postpaid"/>
-				<usage type="internet"/>
-				<username>web</username>
-				<password>vistream</password>
-			</apn>
-		</gsm>
-	</provider>
-	<provider>
-		<name>Materna BR</name>
-		<gsm>
-			<network-id mcc="262" mnc="16"/>
-			<apn value="internet.vistream.net">
-				<plan type="postpaid"/>
-				<usage type="internet"/>
-				<username>web</username>
-				<password>vistream</password>
-			</apn>
-		</gsm>
-	</provider>
-	<provider>
-		<name>sdt.net</name>
-		<gsm>
-			<network-id mcc="262" mnc="16"/>
-			<apn value="internet.vistream.net">
-				<plan type="postpaid"/>
-				<usage type="internet"/>
-				<username>web</username>
-				<password>vistream</password>
-			</apn>
-		</gsm>
-	</provider>
-	<provider>
-		<name>igge &amp; ko</name>
-		<gsm>
-			<network-id mcc="262" mnc="16"/>
-			<apn value="internet.vistream.net">
-				<plan type="postpaid"/>
-				<usage type="internet"/>
-				<username>web</username>
-				<password>vistream</password>
-			</apn>
-		</gsm>
-	</provider>
-	<provider>
-		<name>PTT mobile</name>
-		<gsm>
-			<network-id mcc="262" mnc="16"/>
-			<apn value="internet.vistream.net">
-				<plan type="postpaid"/>
-				<usage type="internet"/>
-				<username>web</username>
-				<password>vistream</password>
-			</apn>
-		</gsm>
-	</provider>
-	<provider>
-		<name>TouristMobile</name>
-		<gsm>
-			<network-id mcc="262" mnc="16"/>
-			<apn value="internet.vistream.net">
-				<plan type="postpaid"/>
-				<usage type="internet"/>
-				<username>web</username>
-				<password>vistream</password>
-			</apn>
-		</gsm>
-	</provider>
-	<provider>
-		<name>SunSIM</name>
-		<gsm>
-			<network-id mcc="262" mnc="16"/>
-			<balance-check>
-				<ussd>*100#</ussd>
-			</balance-check>
-			<apn value="internet.vistream.net">
-				<plan type="postpaid"/>
-				<usage type="internet"/>
-				<username>web</username>
-				<password>vistream</password>
-			</apn>
-		</gsm>
-	</provider>
-	<provider>
-		<name>SüdkurierTel</name>
-		<gsm>
-			<network-id mcc="262" mnc="16"/>
-			<apn value="internet.vistream.net">
-				<plan type="postpaid"/>
-				<usage type="internet"/>
-				<username>web</username>
-				<password>vistream</password>
-			</apn>
-		</gsm>
-	</provider>
-	<provider>
-		<name>NetCologne</name>
-		<gsm>
-			<network-id mcc="262" mnc="03"/>
-			<apn value="internet.netcologne.de">
-				<plan type="postpaid"/>
-				<usage type="internet"/>
-				<username>web</username>
-				<password>password</password>
-			</apn>
-		</gsm>
-	</provider>
-	<provider>
 		<name>Alice</name>
 		<gsm>
 			<network-id mcc="262" mnc="07"/>
@@ -3974,6 +3955,26 @@ conceived.
 		</gsm>
 	</provider>
 	<provider>
+		<name>Lebara</name>
+		<gsm>
+			<apn value="gprsmov.lebaramobile.es">
+				<plan type="prepaid"/>
+				<usage type="internet"/>
+			</apn>
+		</gsm>
+	</provider>
+	<provider>
+		<name>Lowi</name>
+		<gsm>
+			<!-- Reuses Vodafone's MCCMNC -->
+			<!--network-id mcc="214" mnc="06"/-->
+			<apn value="lowi.private.omv.es">
+				<plan type="postpaid"/>
+				<usage type="internet"/>
+			</apn>
+		</gsm>
+	</provider>
+	<provider>
 		<name>Másmovil</name>
 		<gsm>
 			<network-id mcc="214" mnc="03"/>
@@ -3994,7 +3995,8 @@ conceived.
 		</gsm>
 	</provider>
 	<provider>
-		<name>moviData</name>
+		<!-- http://www.happymovil.es/es/prepago/internet-movil -->
+		<name>Happy Móvil/moviData</name>
 		<gsm>
 			<network-id mcc="214" mnc="03"/>
 			<apn value="INTERNETTPH">
@@ -4057,7 +4059,7 @@ conceived.
 		</gsm>
 	</provider>
 	<provider>
-		<name>Simyo/Blau</name>
+		<name>Simyo</name>
 		<gsm>
 			<network-id mcc="214" mnc="19"/>
 			<apn value="gprs-service.com">
@@ -4111,7 +4113,7 @@ conceived.
 		</gsm>
 	</provider>
 	<provider>
-		<name>Vodafone (Airtel)</name>
+		<name>Vodafone</name>
 		<gsm>
 			<network-id mcc="214" mnc="01"/>
 			<network-id mcc="214" mnc="06"/>
@@ -4192,6 +4194,19 @@ conceived.
 		</gsm>
 	</provider>
 	<provider>
+		<!-- from http://www.tuenti.com/movil/apn-tuenti-movil-android -->
+		<name>Tuenti Móvil</name>
+		<gsm>
+			<network-id mcc="214" mnc="05"/>
+			<apn value="tuenti.com">
+				<plan type="postpaid"/>
+				<usage type="internet"/>
+				<username>tuenti</username>
+				<password>tuenti</password>
+			</apn>
+		</gsm>
+	</provider>
+	<provider>
 		<!-- from http://www.eroskimovil.es/geomv/c/pub/en/servicios/datos -->
 		<name>Eroski Móvil</name>
 		<gsm>
@@ -4200,6 +4215,31 @@ conceived.
 				<name>Eroski Móvil GPRS</name>
 				<username>wap@wap</username>
 				<password>wap125</password>
+			</apn>
+		</gsm>
+	</provider>
+	<provider>
+		<!-- from http://www.llamayamovil.com/internet -->
+		<name>LlamaYa móvil</name>
+		<gsm>
+			<network-id mcc="214" mnc="03"/>
+			<apn value="moreinternet">
+				<plan type="postpaid"/>
+				<usage type="internet"/>
+			</apn>
+		</gsm>
+	</provider>
+	<provider>
+		<!-- MVNO operating on Orange's network -->
+		<!-- www.amena.com -->
+		<name>Amena</name>
+		<gsm>
+			<network-id mcc="214" mnc="03"/>
+			<apn value="orangeworld">
+				<plan type="postpaid"/>
+				<usage type="internet"/>
+				<username>orange</username>
+				<password>orange</password>
 			</apn>
 		</gsm>
 	</provider>
@@ -4248,6 +4288,16 @@ conceived.
 
 <!-- Finland -->
 <country code="fi">
+	<provider>
+		<name>Kuiri</name>
+		<gsm>
+			<network-id mcc="244" mnc="31"/>
+			<apn value="kuirinet">
+			<usage type="internet"/>
+				<name>Kuiri Internet</name>
+			</apn>
+		</gsm>
+	</provider>
 	<provider>
 		<name>Dna</name>
 		<gsm>
@@ -4543,6 +4593,9 @@ conceived.
 			<balance-check>
 				<ussd>#123#</ussd>
 			</balance-check>
+			<balance-top-up>
+				<ussd replacement="CODE">#124*CODE#</ussd>
+			</balance-top-up>
 
 			<apn value="orange.fr">
 				<plan type="postpaid"/>
@@ -4693,26 +4746,6 @@ conceived.
 <!-- Britain -->
 <country code="gb">
 	<provider>
-		<name>Asda Mobile</name>
-		<gsm>
-			<network-id mcc="234" mnc="15"/>
-			<apn value="asdamobiles.co.uk">
-				<plan type="prepaid"/>
-				<usage type="internet"/>
-				<username>web</username>
-				<password>web</password>
-			</apn>
-			<apn value="asdamobiles.co.uk">
-				<usage type="mms"/>
-				<name>ASDA MMS</name>
-				<username>wap</username>
-				<password>wap</password>
-				<mmsc>http://mms.asdamobiles.co.uk/servlets/mms</mmsc>
-				<mmsproxy>212.183.137.12:8799</mmsproxy>
-			</apn>
-		</gsm>
-	</provider>
-	<provider>
 		<name>BT Mobile</name>
 		<gsm>
 			<network-id mcc="234" mnc="00"/>
@@ -4721,33 +4754,6 @@ conceived.
 				<usage type="internet"/>
 				<username>bt</username>
 				<password>bt</password>
-			</apn>
-		</gsm>
-	</provider>
-	<provider>
-		<name>giffgaff</name>
-		<gsm>
-			<network-id mcc="234" mnc="02"/>
-			<network-id mcc="234" mnc="10"/>
-			<network-id mcc="234" mnc="11"/>
-			<voicemail>443</voicemail>
-			<balance-check>
-				<ussd>*100#</ussd>
-			</balance-check>
-			<apn value="giffgaff.com">
-				<plan type="prepaid"/>
-				<usage type="internet"/>
-				<name>Mobile Broadband</name>
-				<username>giffgaff</username>
-				<password>password</password>
-			</apn>
-			<apn value="wap.o2.co.uk">
-				<usage type="mms"/>
-				<name>O2 MMS</name>
-				<username>o2wap</username>
-				<password>password</password>
-				<mmsc>http://mmsc.mms.o2.co.uk:8002</mmsc>
-				<mmsproxy>193.113.200.195:8080</mmsproxy>
 			</apn>
 		</gsm>
 	</provider>
@@ -4809,6 +4815,33 @@ conceived.
 				<name>WAP</name>
 				<username>o2wap</username>
 				<password>password</password>
+			</apn>
+		</gsm>
+	</provider>
+	<provider>
+		<name>giffgaff</name>
+		<gsm>
+			<network-id mcc="234" mnc="02"/>
+			<network-id mcc="234" mnc="10"/>
+			<network-id mcc="234" mnc="11"/>
+			<voicemail>443</voicemail>
+			<balance-check>
+				<ussd>*100#</ussd>
+			</balance-check>
+			<apn value="giffgaff.com">
+				<plan type="prepaid"/>
+				<usage type="internet"/>
+				<name>Mobile Broadband</name>
+				<username>giffgaff</username>
+				<password>password</password>
+			</apn>
+			<apn value="wap.o2.co.uk">
+				<usage type="mms"/>
+				<name>O2 MMS</name>
+				<username>o2wap</username>
+				<password>password</password>
+				<mmsc>http://mmsc.mms.o2.co.uk:8002</mmsc>
+				<mmsproxy>193.113.200.195:8080</mmsproxy>
 			</apn>
 		</gsm>
 	</provider>
@@ -4939,6 +4972,26 @@ conceived.
 				<plan type="postpaid"/>
 				<usage type="internet"/>
 				<name>TopUp and Go (older 1GB SIMs)</name>
+			</apn>
+		</gsm>
+	</provider>
+	<provider>
+		<name>Asda Mobile</name>
+		<gsm>
+			<network-id mcc="234" mnc="15"/>
+			<apn value="asdamobiles.co.uk">
+				<plan type="prepaid"/>
+				<usage type="internet"/>
+				<username>web</username>
+				<password>web</password>
+			</apn>
+			<apn value="asdamobiles.co.uk">
+				<usage type="mms"/>
+				<name>ASDA MMS</name>
+				<username>wap</username>
+				<password>wap</password>
+				<mmsc>http://mms.asdamobiles.co.uk/servlets/mms</mmsc>
+				<mmsproxy>212.183.137.12:8799</mmsproxy>
 			</apn>
 		</gsm>
 	</provider>
@@ -6479,6 +6532,9 @@ conceived.
 			<network-id mcc="405" mnc="05"/>
 			<network-id mcc="405" mnc="10"/>
 			<network-id mcc="405" mnc="13"/>
+			<balance-check>
+				<ussd> *111*1*3#</ussd>
+			</balance-check>
 			<apn value="smartnet">
 				<plan type="postpaid"/>
 				<usage type="internet"/>
@@ -6908,6 +6964,42 @@ conceived.
 			</apn>
 		</gsm>
 	</provider>
+	<provider primary="true">
+		<!-- Full MVNO with an own MNC code -->
+		<name>Nòverca</name>
+		<gsm>
+			<network-id mcc="222" mnc="07"/>
+			<apn value="web.noverca.it">
+				<plan type="prepaid"/>
+				<usage type="internet"/>
+				<name>Noverca WEB</name>
+			</apn>
+			<apn value="mms.noverca.it">
+				<usage type="mms"/>
+				<name>Noverca MMS</name>
+				<mmsc>http://mms.noverca.it/</mmsc>
+				<mmsproxy>10.248.1.12:80</mmsproxy>
+			</apn>
+			<apn value="wap.noverca.it">
+				<plan type="postpaid"/>
+				<usage type="wap"/>
+				<name>Noverca WAP</name>
+				<gateway>10.248.1.12:80</gateway>
+			</apn>
+		</gsm>
+	</provider>
+	<provider>
+		<!-- MVNO operating on TIM's network -->
+		<name>Tiscali</name>
+		<gsm>
+			<network-id mcc="222" mnc="01"/>
+			<apn value="tiscalimobileinternet">
+				<plan type="prepaid"/>
+				<usage type="internet"/>
+				<name>Tiscali Internet</name>
+			</apn>
+		</gsm>
+	</provider>
 </country>
 
 <!-- Jersey -->
@@ -7245,6 +7337,9 @@ conceived.
 		<name>MegaCom</name>
 		<gsm>
 			<network-id mcc="437" mnc="05"/>
+			<balance-check>
+				<ussd>*500#</ussd>
+			</balance-check>
 			<apn value="internet">
 				<plan type="postpaid"/>
 				<usage type="internet"/>
@@ -7255,6 +7350,9 @@ conceived.
 		<name>O!</name>
 		<gsm>
 			<network-id mcc="437" mnc="09"/>
+			<balance-check>
+				<ussd>*100#</ussd>
+			</balance-check>
 			<apn value="internet">
 				<plan type="postpaid"/>
 				<usage type="internet"/>
@@ -8330,6 +8428,32 @@ conceived.
 			</apn>
 		</gsm>
 	</provider>
+	<provider>
+		<name>Telenor</name>
+		<gsm>
+			<network-id mcc="414" mnc="06"/>
+			<apn value="internet">
+				<plan type="postpaid"/>
+				<usage type="internet"/>
+				<name>Telenor</name>
+				<username>internet</username>
+				<password>internet</password>
+			</apn>
+		</gsm>
+	</provider>
+	<provider>
+		<name>Ooredoo</name>
+		<gsm>
+			<network-id mcc="414" mnc="05"/>
+			<apn value="internet">
+				<plan type="postpaid"/>
+				<usage type="internet"/>
+				<name>Ooredoo</name>
+				<username>internet</username>
+				<password>internet</password>
+			</apn>
+		</gsm>
+	</provider>
 </country>
 
 <!-- Mongolia -->
@@ -9108,6 +9232,13 @@ conceived.
 				<username>vodafone</username>
 				<password>vodafone</password>
 			</apn>
+			<apn value="m2m.global.vodafone.nl">
+				<usage type="internet"/>
+				<name>M2M</name>
+				<username>web</username>
+				<password>web</password>
+				<authentication method="pap"/>
+			</apn>
 		</gsm>
 	</provider>
 	<provider>
@@ -9191,11 +9322,16 @@ conceived.
 				<sms text="saldo">2525</sms>
 			</balance-check>
 
-			<apn value="telenor">
+			<apn value="telenor.smart">
 				<plan type="postpaid"/>
 				<usage type="internet"/>
-				<dns>212.17.131.3</dns>
-				<dns>148.122.161.2</dns>
+				<name>Telenor</name>
+			</apn>
+			<apn value="telenor.smart">
+				<usage type="mms"/>
+				<name>Telenor MMS</name>
+				<mmsc>http://mmsc</mmsc>
+				<mmsproxy>mms-proxy.telenor.no:8080</mmsproxy>
 			</apn>
 			<apn value="mms.ventelo.no">
 				<usage type="mms"/>
@@ -9593,6 +9729,23 @@ conceived.
 			<apn value="internet">
 				<plan type="postpaid"/>
 				<usage type="internet"/>
+			</apn>
+		</gsm>
+	</provider>
+</country>
+
+<!-- Papua New Guinea -->
+<country code="pg">
+	<provider>
+		<name>Digicel</name>
+		<gsm>
+			<network-id mcc="537" mnc="03"/>
+			<apn value="internet.digicelpng.com">
+				<plan type="prepaid"/>
+				<usage type="internet"/>
+				<name>Prepaid</name>
+				<dns>10.149.64.77</dns>
+				<dns>8.8.8.8</dns>
 			</apn>
 		</gsm>
 	</provider>
@@ -11532,7 +11685,7 @@ conceived.
 	<provider>
 		<name>Claro</name>
 		<gsm>
-			<network-id mcc="706" mnc="10"/>
+			<network-id mcc="706" mnc="01"/>
 			<apn value="internet.ideasclaro">
 				<plan type="postpaid"/>
 				<usage type="internet"/>
@@ -13107,6 +13260,10 @@ conceived.
 		<gsm>
 			<network-id mcc="310" mnc="410"/>
 			<apn value="att.mvno">
+				<plan type="prepaid"/>
+				<usage type="internet"/>
+			</apn>
+			<apn value="tfdata">
 				<plan type="prepaid"/>
 				<usage type="internet"/>
 			</apn>
