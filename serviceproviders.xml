@@ -2256,6 +2256,16 @@ conceived.
 			</apn>
 		</gsm>
 	</provider>
+	<provider>
+		<name>Orange</name>
+		<gsm>
+			<network-id mcc="652" mnc="02"/>
+			<apn value="internet.orange.co.bw">
+				<plan type="postpaid"/>
+				<usage type="internet"/>
+			</apn>
+		</gsm>
+	</provider>
 </country>
 
 <!-- Burundi -->
@@ -4534,15 +4544,20 @@ conceived.
 		<name>DNA</name>
 		<gsm>
 			<network-id mcc="244" mnc="12"/>
-			<apn value="data.dna.fi">
-				<plan type="postpaid"/>
-				<usage type="internet"/>
-				<name>Postpaid (contract) public IP address</name>
-			</apn>
 			<apn value="internet">
 				<plan type="postpaid"/>
 				<usage type="internet"/>
 				<name>Postpaid (contract) NAT (available for all subscribers)</name>
+			</apn>
+			<apn value="julkinen.dna.fi">
+				<plan type="postpaid"/>
+				<usage type="internet"/>
+				<name>Postpaid (contract) public IP address (Dec 2016 and later individual subscriptions)</name>
+			</apn>
+			<apn value="data.dna.fi">
+				<plan type="postpaid"/>
+				<usage type="internet"/>
+				<name>Postpaid (contract) public IP address (Nov 2016 and earlier individual, and all company subscriptions)</name>
 			</apn>
 		</gsm>
 	</provider>
@@ -4612,7 +4627,7 @@ conceived.
 		</gsm>
 	</provider>
 	<provider>
-		<name>Sonera</name>
+		<name>Telia</name>
 		<gsm>
 			<network-id mcc="244" mnc="91"/>
 
@@ -4627,6 +4642,13 @@ conceived.
 			<apn value="internet">
 				<plan type="postpaid"/>
 				<usage type="internet"/>
+				<dns>192.89.123.230</dns>
+				<dns>192.89.123.231</dns>
+			</apn>
+			<apn value="opengate">
+				<plan type="postpaid"/>
+				<usage type="internet"/>
+				<name>Open Gate (public IP, open ports; needs to be ordered)</name>
 				<dns>192.89.123.230</dns>
 				<dns>192.89.123.231</dns>
 			</apn>
@@ -4843,6 +4865,40 @@ conceived.
 				<plan type="postpaid"/>
 				<usage type="internet"/>
 				<name>Internet Everywhere 3G</name>
+			</apn>
+		</gsm>
+	</provider>
+	<provider>
+		<name>Prixtel</name>
+		<gsm>
+			<network-id mcc="208" mnc="01"/>
+			<network-id mcc="208" mnc="10"/>
+			<voicemail>789</voicemail>
+			<apn value="Orange">
+				<plan type="postpaid"/>
+				<usage type="internet"/>
+				<name>via Orange</name>
+				<username>orange</username>
+				<password>orange</password>
+			</apn>
+			<apn value="orange.acte">
+				<usage type="mms"/>
+				<name>via Orange</name>
+				<username>orange</username>
+				<password>orange</password>
+				<mmsc>http://mms.orange.fr</mmsc>
+				<mmsproxy>192.168.10.200:8080</mmsproxy>
+			</apn>
+			<apn value="sl2sfr">
+				<plan type="postpaid"/>
+				<usage type="internet"/>
+				<name>via SFR</name>
+			</apn>
+			<apn value="sl2sfr">
+				<usage type="mms"/>
+				<name>via SFR</name>
+				<mmsc>http://mms1</mmsc>
+				<mmsproxy>10.151.0.1:8080</mmsproxy>
 			</apn>
 		</gsm>
 	</provider>
@@ -5578,6 +5634,32 @@ conceived.
 				<usage type="internet"/>
 				<username>movistargt</username>
 				<password>movistargt</password>
+			</apn>
+		</gsm>
+	</provider>
+</country>
+
+<!-- Guinea -->
+<country code="gn">
+	<provider>
+		<name>Orange</name>
+		<gsm>
+			<network-id mcc="611" mnc="01"/>
+			<apn value="internetogn">
+				<plan type="postpaid"/>
+				<usage type="internet"/>
+			</apn>
+		</gsm>
+	</provider>
+	<provider>
+		<name>Cellcom</name>
+		<gsm>
+			<network-id mcc="611" mnc="05"/>
+			<apn value="internet.cellcom.com">
+				<plan type="postpaid"/>
+				<usage type="internet"/>
+				<username>internet</username>
+				<password>cellcom</password>
 			</apn>
 		</gsm>
 	</provider>
@@ -7286,6 +7368,22 @@ conceived.
 			</apn>
 		</gsm>
 	</provider>
+	<provider>
+		<name>Iliad</name>
+		<gsm>
+			<network-id mcc="222" mnc="50"/>
+			<apn value="iliad">
+				<plan type="prepaid"/>
+				<usage type="internet"/>
+				<name>Iliad</name>
+			</apn>
+			<apn value="mms.iliad.it">
+				<usage type="mms"/>
+				<name>Iliad MMS</name>
+				<mmsc>http://mms.iliad.it</mmsc>
+			</apn>
+		</gsm>
+	</provider>
 </country>
 
 <!-- Jersey -->
@@ -8044,6 +8142,20 @@ conceived.
 				<username>mtctouch</username>
 				<mmsc>http://mms:8088/mms/</mmsc>
 				<mmsproxy>192.168.4.103:8080</mmsproxy>
+			</apn>
+		</gsm>
+	</provider>
+</country>
+
+<!-- Liechtenstein -->
+<country code="li">
+	<provider>
+		<name>Datamobile</name>
+		<gsm>
+			<network-id mcc="295" mnc="05"/>
+			<apn value="datamobile.ag">
+				<plan type="postpaid"/>
+				<usage type="internet"/>
 			</apn>
 		</gsm>
 	</provider>
@@ -12013,6 +12125,23 @@ conceived.
 				<name>T2 MMS</name>
 				<mmsc>http://www.mms.t-2.net:8002</mmsc>
 				<mmsproxy>172.20.18.137:8080</mmsproxy>
+			</apn>
+		</gsm>
+	</provider>
+	<provider>
+		<name>Telemach</name>
+		<gsm>
+			<network-id mcc="293" mnc="70"/>
+			<balance-check>
+				<ussd>*123#</ussd>
+			</balance-check>
+			<balance-top-up>
+				<ussd replacement="CODE">*123*CODE#</ussd>
+			</balance-top-up>
+			<apn value="internet">
+				<plan type="prepaid"/>
+				<usage type="internet"/>
+				<name>NET2GO/FREE2GO</name>
 			</apn>
 		</gsm>
 	</provider>
