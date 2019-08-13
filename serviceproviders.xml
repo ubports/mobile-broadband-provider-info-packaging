@@ -638,62 +638,11 @@ conceived.
 		</gsm>
 	</provider>
 	<provider>
-		<name>Orange</name>
-		<gsm>
-			<network-id mcc="232" mnc="05"/>
-			<apn value="web.one.at">
-				<plan type="postpaid"/>
-				<usage type="internet"/>
-				<name>OneNet Web</name>
-				<username>web</username>
-				<password>web</password>
-				<dns>194.24.128.100</dns>
-				<dns>194.24.128.102</dns>
-			</apn>
-			<apn value="wap.one.at">
-				<plan type="postpaid"/>
-				<usage type="wap"/>
-				<name>Orange WAP</name>
-				<username>wap</username>
-				<password>wap</password>
-			</apn>
-			<apn value="mms.one.at">
-				<plan type="postpaid"/>
-				<usage type="mms"/>
-				<name>Orange MMS</name>
-				<username>mms</username>
-				<password>mms</password>
-			</apn>
-			<apn value="fullspeed">
-				<plan type="postpaid"/>
-				<usage type="internet"/>
-				<name>Web (no filtering)</name>
-				<username>web</username>
-				<password>web</password>
-			</apn>
-			<apn value="orange.web">
-				<plan type="postpaid"/>
-				<usage type="internet"/>
-				<name>Orange Web</name>
-				<username>Orange</username>
-				<password>Orange</password>
-				<dns>81.3.216.100</dns>
-				<dns>194.24.128.100</dns>
-			</apn>
-			<apn value="orange.mms">
-				<plan type="postpaid"/>
-				<usage type="mms"/>
-				<name>Orange Web</name>
-				<username>mms</username>
-				<password>mms</password>
-			</apn>
-		</gsm>
-	</provider>
-	<provider>
 		<name>Drei (3)</name>
 		<name xml:lang="de">Drei</name>
 		<gsm>
 			<network-id mcc="232" mnc="10"/>
+			<network-id mcc="232" mnc="05"/>
 			<apn value="drei.at">
 				<plan type="postpaid"/>
 				<usage type="internet"/>
@@ -3210,6 +3159,12 @@ conceived.
 		<name>T-Mobile</name>
 		<gsm>
 			<network-id mcc="230" mnc="01"/>
+			<balance-check>
+				<ussd>*101*#</ussd>
+			</balance-check>
+			<balance-top-up>
+				<ussd replacement="CODE">*102*CODE#</ussd>
+			</balance-top-up>
 			<apn value="internet.t-mobile.cz">
 				<plan type="postpaid"/>
 				<usage type="internet"/>
@@ -3629,6 +3584,15 @@ conceived.
 			</apn>
 		</gsm>
 	</provider>
+	<provider>
+		<name>winSIM</name>
+		<gsm>
+			<apn value="internet">
+				<plan type="postpaid"/>
+				<usage type="internet"/>
+			</apn>
+		</gsm>
+	</provider>
 </country>
 
 <!-- Denmark -->
@@ -3641,7 +3605,7 @@ conceived.
 				<plan type="postpaid"/>
 				<usage type="internet"/>
 				<name>Bredbånd (standard)</name>
- 			</apn>
+			</apn>
 			<apn value="net.tre.dk">
 				<plan type="prepaid"/>
 				<usage type="internet"/>
@@ -4485,6 +4449,18 @@ conceived.
 			</apn>
 		</gsm>
 	</provider>
+	<provider>
+		<name>Suop</name>
+		<gsm>
+			<balance-check>
+				<ussd>*123#</ussd>
+			</balance-check>
+			<apn value="inet.es">
+				<plan type="postpaid"/>
+				<usage type="internet"/>
+			</apn>
+		</gsm>
+	</provider>
 </country>
 
 <!-- Ethiopia -->
@@ -4558,6 +4534,11 @@ conceived.
 				<plan type="postpaid"/>
 				<usage type="internet"/>
 				<name>Postpaid (contract) public IP address (Nov 2016 and earlier individual, and all company subscriptions)</name>
+			</apn>
+			<apn value="data.moimobile.fi">
+				<plan type="postpaid"/>
+				<usage type="internet"/>
+				<name>Moi Mobiili</name>
 			</apn>
 		</gsm>
 	</provider>
@@ -7527,7 +7508,7 @@ conceived.
 			</apn>
 		</gsm>
 	</provider>
-	<provider>
+	<provider primary="false">
 		<name>b-mobile</name>
 		<gsm>
 			<network-id mcc="440" mnc="10"/>
@@ -7536,6 +7517,13 @@ conceived.
 				<usage type="internet"/>
 				<name>u300</name>
 				<username>bmobile@u300</username>
+				<password>bmobile</password>
+			</apn>
+			<apn value="bmobile.ne.jp">
+				<plan type="prepaid"/>
+				<usage type="internet"/>
+				<name>Visitor SIM</name>
+				<username>bmobile@4g</username>
 				<password>bmobile</password>
 			</apn>
 		</gsm>
@@ -7552,7 +7540,7 @@ conceived.
 			</apn>
 		</gsm>
 	</provider>
-	<provider>
+	<provider primary="true">
 		<name>NTTdocomo</name>
 		<gsm>
 			<network-id mcc="440" mnc="01"/>
