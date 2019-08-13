@@ -1311,8 +1311,23 @@ conceived.
 		<name>Robi (AKTel)</name>
 		<gsm>
 			<network-id mcc="470" mnc="02"/>
+			<msisdn-query>
+				<ussd>*140*2*4#</ussd>
+			</msisdn-query>
+			<balance-check>
+				<ussd>*222#</ussd>
+			</balance-check>
+			<balance-top-up>
+				<ussd replacement="CODE">*111*CODE#</ussd>
+			</balance-top-up>
 			<apn value="internet">
 				<plan type="postpaid"/>
+				<usage type="internet"/>
+				<name>Internet</name>
+				<dns>192.168.23.7</dns>
+			</apn>
+			<apn value="internet">
+				<plan type="prepaid"/>
 				<usage type="internet"/>
 				<name>Internet</name>
 				<dns>192.168.23.7</dns>
@@ -1329,8 +1344,23 @@ conceived.
 		<name>Banglalink</name>
 		<gsm>
 			<network-id mcc="470" mnc="03"/>
+			<msisdn-query>
+				<ussd>*511#</ussd>
+			</msisdn-query>
+			<balance-check>
+				<ussd>*124#</ussd>
+			</balance-check>
+			<balance-top-up>
+				<ussd replacement="CODE">*123*CODE#</ussd>
+			</balance-top-up>
 			<apn value="blweb">
 				<plan type="postpaid"/>
+				<usage type="internet"/>
+				<name>Web</name>
+				<dns>10.10.55.34</dns>
+			</apn>
+			<apn value="blweb">
+				<plan type="prepaid"/>
 				<usage type="internet"/>
 				<name>Web</name>
 				<dns>10.10.55.34</dns>
@@ -1347,9 +1377,28 @@ conceived.
 		<name>GrameenPhone</name>
 		<gsm>
 			<network-id mcc="470" mnc="01"/>
+			<msisdn-query>
+				<ussd>*2#</ussd>
+			</msisdn-query>
+			<balance-check>
+				<ussd>*566#</ussd>
+			</balance-check>
+			<balance-top-up>
+				<ussd replacement="CODE">*555*CODE#</ussd>
+			</balance-top-up>
 			<apn value="gpinternet">
 				<plan type="postpaid"/>
 				<usage type="internet"/>
+				<username>gp</username>
+				<password>gp</password>
+				<dns>202.56.4.120</dns>
+				<dns>202.56.4.121</dns>
+			</apn>
+			<apn value="gpinternet">
+				<plan type="prepaid"/>
+				<usage type="internet"/>
+				<username>gp</username>
+				<password>gp</password>
 				<dns>202.56.4.120</dns>
 				<dns>202.56.4.121</dns>
 			</apn>
@@ -1365,8 +1414,23 @@ conceived.
 		<name>Airtel (Warid)</name>
 		<gsm>
 			<network-id mcc="470" mnc="07"/>
+			<msisdn-query>
+				<ussd>*121*6*3#</ussd>
+			</msisdn-query>
+			<balance-check>
+				<ussd>*778#</ussd>
+			</balance-check>
+			<balance-top-up>
+				<ussd replacement="CODE">*787*CODE#</ussd>
+			</balance-top-up>
 			<apn value="internet">
 				<plan type="postpaid"/>
+				<usage type="internet"/>
+				<name>Internet</name>
+				<dns>10.6.0.2</dns>
+			</apn>
+			<apn value="internet">
+				<plan type="prepaid"/>
 				<usage type="internet"/>
 				<name>Internet</name>
 				<dns>10.6.0.2</dns>
@@ -1384,6 +1448,15 @@ conceived.
 		<name>Teletalk</name>
 		<gsm>
 			<network-id mcc="470" mnc="04"/>
+			<msisdn-query>
+				<ussd>*551#</ussd>
+			</msisdn-query>
+			<balance-check>
+				<ussd>*152#</ussd>
+			</balance-check>
+			<balance-top-up>
+				<ussd replacement="CODE">#151*CODE#</ussd>
+			</balance-top-up>
 			<apn value="wap">
 				<plan type="prepaid"/>
 				<usage type="internet"/>
@@ -2635,6 +2708,7 @@ conceived.
 	<provider>
 		<name>Movistar</name>
 		<gsm>
+			<network-id mcc="730" mnc="02"/>
 			<network-id mcc="730" mnc="10"/>
 			<apn value="web.tmovil.cl">
 				<plan type="postpaid"/>
@@ -3006,6 +3080,12 @@ conceived.
 		<name>O2</name>
 		<gsm>
 			<network-id mcc="230" mnc="02"/>
+			<balance-check>
+				<ussd>*104*#</ussd>
+			</balance-check>
+			<balance-top-up>
+				<ussd replacement="CODE">*102*CODE#</ussd>
+			</balance-top-up>
 			<apn value="internet">
 				<plan type="postpaid"/>
 				<usage type="internet"/>
@@ -4299,65 +4379,18 @@ conceived.
 		</gsm>
 	</provider>
 	<provider>
-		<name>Dna</name>
+		<name>DNA</name>
 		<gsm>
-			<network-id mcc="244" mnc="03"/>
-			<!-- Phone number dependent:
-			 - Numbers beginning with 044 XXXXXXX turn in to 044 6 XXXXXXX
-			 - Numbers beginning with 041 XXXXXXX turn in to 041 6 XXXXXXX
-			 - Others case by case
-			 http://www.dna.fi/Yrityksille/Matkaviestinpalvelut/LiittymienLisapalvelut/dnafaksivastaaja/Documents/dna_vastaaja_kayttohje_120310.pdf
-			<voicemail/> -->
-			<balance-check>
-				<ussd>*100#</ussd>
-				<dtmf>0800412582</dtmf>
-				<sms text="SALDO">14000</sms>
-			</balance-check>
-
+			<network-id mcc="244" mnc="12"/>
+			<apn value="data.dna.fi">
+				<plan type="postpaid"/>
+				<usage type="internet"/>
+				<name>Postpaid (contract) public IP address</name>
+			</apn>
 			<apn value="internet">
 				<plan type="postpaid"/>
 				<usage type="internet"/>
-				<name>dna internet</name>
-				<dns>217.78.192.22</dns>
-				<dns>217.78.192.78</dns>
-			</apn>
-			<apn value="mms">
-				<usage type="mms"/>
-				<name>dna MMS</name>
-				<username>dna</username>
-				<password>mms</password>
-				<mmsc>http://mmsc.dnafinland.fi</mmsc>
-				<mmsproxy>10.1.1.2:8080</mmsproxy>
-			</apn>
-		</gsm>
-	</provider>
-	<provider>
-		<name>Dna</name>
-		<gsm>
-			<network-id mcc="244" mnc="04"/>
-			<apn value="internet">
-				<usage type="internet"/>
-				<name>dna internet</name>
-			</apn>
-		</gsm>
-	</provider>
-	<provider>
-		<name>Dna</name>
-		<gsm>
-			<network-id mcc="244" mnc="12"/>
-			<apn value="internet">
-				<usage type="internet"/>
-				<name>dna internet</name>
-			</apn>
-		</gsm>
-	</provider>
-	<provider>
-		<name>Dna</name>
-		<gsm>
-			<network-id mcc="244" mnc="13"/>
-			<apn value="internet">
-				<usage type="internet"/>
-				<name>dna internet</name>
+				<name>Postpaid (contract) NAT (available for all subscribers)</name>
 			</apn>
 		</gsm>
 	</provider>
@@ -8592,6 +8625,20 @@ conceived.
 		</gsm>
 	</provider>
 	<provider>
+		<name>Melita</name>
+		<gsm>
+			<network-id mcc="278" mnc="77"/>
+			<balance-check>
+				<sms text="melita">16877</sms>
+			</balance-check>
+			<apn value="web.melita">
+				<plan type="postpaid"/>
+				<usage type="internet"/>
+				<name>Melita Connector</name>
+			</apn>
+		</gsm>
+	</provider>
+	<provider>
 		<name>Vodafone</name>
 		<gsm>
 			<network-id mcc="278" mnc="01"/>
@@ -9095,17 +9142,19 @@ conceived.
 			</apn>
 		</gsm>
 	</provider>
-	<provider>
+	<provider primary="true">
 		<name>KPN NL</name>
 		<gsm>
 			<network-id mcc="204" mnc="08"/>
 			<apn value="prepaidinternet">
-				<plan type="postpaid"/>
+				<plan type="prepaid"/>
 				<usage type="internet"/>
+				<name>KPN Prepaid Mobiel Internet</name>
 			</apn>
 			<apn value="fastinternet">
 				<plan type="postpaid"/>
 				<usage type="internet"/>
+				<name>KPN 3G/2G LTE Mobiel Internet</name>
 			</apn>
 			<apn value="internet">
 				<plan type="postpaid"/>
@@ -9115,11 +9164,22 @@ conceived.
 				<dns>62.133.126.28</dns>
 				<dns>62.133.126.29</dns>
 			</apn>
-			<apn value="noapn">
+			<apn value="KPN4G.nl">
 				<plan type="postpaid"/>
 				<usage type="internet"/>
-				<dns>62.133.126.28</dns>
-				<dns>62.133.126.29</dns>
+				<name>KPN 4G LTE Mobiel Internet</name>
+			</apn>
+			<apn value="portalmmm.nl">
+				<plan type="postpaid"/>
+				<plan type="prepaid"/>
+				<usage type="internet"/>
+				<name>KPN Mobiel Internet</name>
+			</apn>
+			<apn value="portalmmm.nl">
+				<usage type="mms"/>
+				<name>KPN MMS</name>
+				<mmsc>http://mp.mobiel.kpn/mmsc</mmsc>
+				<mmsproxy>10.10.100.20:5080</mmsproxy>
 			</apn>
 		</gsm>
 	</provider>
@@ -9150,16 +9210,27 @@ conceived.
 		<name>T-Mobile</name>
 		<gsm>
 			<network-id mcc="204" mnc="16"/>
+			<balance-check>
+				<sms text="SALDO">1144</sms>
+			</balance-check>
 			<apn value="internet">
 				<plan type="postpaid"/>
+				<plan type="prepaid"/>
 				<usage type="internet"/>
-				<dns>193.78.240.12</dns>
-				<dns>193.79.242.39</dns>
+				<name>T-Mobile Internet</name>
 			</apn>
-			<apn value="mms.ben">
+			<apn value="smartsites.t-mobile">
+				<plan type="postpaid"/>
+				<plan type="prepaid"/>
+				<usage type="internet"/>
+				<name>T-Mobile NL</name>
+			</apn>
+			<apn value="mms">
 				<usage type="mms"/>
-				<name>Ben MMS</name>
-				<mmsc>http://benmms</mmsc>
+				<name>T-Mobile NL MMS</name>
+				<username>tmobilemms</username>
+				<password>tmobilemms</password>
+				<mmsc>http://t-mobilemms</mmsc>
 				<mmsproxy>10.10.10.11:8080</mmsproxy>
 			</apn>
 		</gsm>
@@ -9168,11 +9239,25 @@ conceived.
 		<name>Ben</name>
 		<gsm>
 			<network-id mcc="204" mnc="16"/>
+			<apn value="basic.internet.ben.data">
+				<plan type="prepaid"/>
+				<usage type="internet"/>
+				<name>Ben internet (prepaid)</name>
+				<dns>193.78.240.12</dns>
+				<dns>193.79.242.39</dns>
+			</apn>
 			<apn value="internet.ben">
 				<plan type="postpaid"/>
 				<usage type="internet"/>
+				<name>Ben internet</name>
 				<dns>193.78.240.12</dns>
 				<dns>193.79.242.39</dns>
+			</apn>
+			<apn value="mms.ben">
+				<usage type="mms"/>
+				<name>Ben MMS</name>
+				<mmsc>http://benmms</mmsc>
+				<mmsproxy>10.10.10.11:8080</mmsproxy>
 			</apn>
 		</gsm>
 	</provider>
@@ -9449,6 +9534,16 @@ conceived.
 				<plan type="postpaid"/>
 				<usage type="internet"/>
 				<name>Mobilt bredbånd</name>
+			</apn>
+		</gsm>
+	</provider>
+	<provider>
+		<name>Phonero</name>
+		<gsm>
+			<network-id mcc="242" mnc="01"/>
+			<apn value="internet.phonero.no">
+				<plan type="postpaid"/>
+				<usage type="internet"/>
 			</apn>
 		</gsm>
 	</provider>
