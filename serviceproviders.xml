@@ -549,6 +549,24 @@ conceived.
 		</gsm>
 	</provider>
 	<provider>
+		<name>Lycamobile</name>
+		<gsm>
+			<network-id mcc="232" mnc="08"/>
+			<balance-check>
+				<ussd>*231#</ussd>
+			</balance-check>
+			<balance-top-up>
+				<ussd replacement="CODE">*231*CODE#</ussd>
+			</balance-top-up>
+			<apn value="data.lycamobile.at">
+				<plan type="prepaid"/>
+				<usage type="internet"/>
+				<username>lmat</username>
+				<password>plus</password>
+			</apn>
+		</gsm>
+	</provider>
+	<provider>
 		<name>T-Mobile</name>
 		<gsm>
 			<network-id mcc="232" mnc="03"/>
@@ -915,6 +933,24 @@ conceived.
 		<gsm>
 			<network-id mcc="505" mnc="02"/>
 			<apn value="primuslns1"/>
+		</gsm>
+	</provider>
+	<provider>
+		<name>Lycamobile</name>
+		<gsm>
+			<network-id mcc="505" mnc="19"/>
+			<balance-check>
+				<ussd>*131#</ussd>
+			</balance-check>
+			<balance-top-up>
+				<ussd replacement="CODE">*131*CODE#</ussd>
+			</balance-top-up>
+			<apn value="data.lycamobile.com.au">
+				<plan type="prepaid"/>
+				<usage type="internet"/>
+				<username>lmau</username>
+				<password>plus</password>
+			</apn>
 		</gsm>
 	</provider>
 	<provider>
@@ -1485,6 +1521,24 @@ conceived.
 <!-- Belgium -->
 <country code="be">
 	<provider>
+		<name>Lycamobile</name>
+		<gsm>
+			<network-id mcc="206" mnc="06"/>
+			<balance-check>
+				<ussd>*103#</ussd>
+			</balance-check>
+			<balance-top-up>
+				<ussd replacement="CODE">*103*CODE#</ussd>
+			</balance-top-up>
+			<apn value="data.lycamobile.be">
+				<plan type="prepaid"/>
+				<usage type="internet"/>
+				<username>lmbe</username>
+				<password>plus</password>
+			</apn>
+		</gsm>
+	</provider>
+	<provider>
 		<name>Mobistar</name>
 		<gsm>
 			<network-id mcc="206" mnc="10"/>
@@ -2000,6 +2054,19 @@ conceived.
 	</provider>
 </country>
 
+<!-- Bermuda -->
+<country code="bm">
+	<provider>
+		<name>CellOne</name>
+		<gsm>
+			<network-id mcc="350" mnc="00"/>
+			<apn value="web.c1.bm">
+				<usage type="internet"/>
+			</apn>
+		</gsm>
+	</provider>
+</country>
+
 <!-- Brunei -->
 <country code="bn">
 	<provider>
@@ -2492,6 +2559,24 @@ conceived.
 
 <!-- Switzerland -->
 <country code="ch">
+	<provider>
+		<name>Lycamobile</name>
+		<gsm>
+			<network-id mcc="228" mnc="54"/>
+			<balance-check>
+				<ussd>*131#</ussd>
+			</balance-check>
+			<balance-top-up>
+				<ussd replacement="CODE">*131*CODE#</ussd>
+			</balance-top-up>
+			<apn value="data.lycamobile.ch">
+				<plan type="prepaid"/>
+				<usage type="internet"/>
+				<username>lmch</username>
+				<password>plus</password>
+			</apn>
+		</gsm>
+	</provider>
 	<provider>
 		<name>Orange</name>
 		<gsm>
@@ -3123,6 +3208,28 @@ conceived.
 			</apn>
 		</gsm>
 	</provider>
+	<!-- Czech MVNO operators -->
+ 	<provider primary="false">
+		<!-- MVNO operating on T-Mobile's network -->
+ 		<name>MOBIL.CZ</name>
+ 		<gsm>
+			<network-id mcc="230" mnc="01"/>
+			<!-- http://www.mobil.cz/kredit.aspx#jakDobit -->
+			<balance-check>
+				<ussd>*146#</ussd>
+			</balance-check>
+			<balance-top-up>
+				<ussd replacement="CODE">*144*CODE#</ussd>
+			</balance-top-up>
+			<!-- http://www.mobil.cz/podpora-kredit.aspx#internet-1 -->
+			<apn value="internet.t-mobile.cz">
+ 				<plan type="prepaid"/>
+				<usage type="internet"/>
+ 				<username>gprs</username>
+ 				<password>gprs</password>
+			</apn>
+		</gsm>
+	</provider>
 </country>
 
 <!-- Germany -->
@@ -3148,14 +3255,6 @@ conceived.
 				<password>gprs</password>
 				<dns>212.23.97.2</dns>
 				<dns>212.23.97.3</dns>
-			</apn>
-			<apn value="tagesflat.eplus.de">
-				<plan type="postpaid"/>
-				<usage type="internet"/>
-				<name>24 Hour Flatrate</name>
-				<name xml:lang="de">Tages-Flatrate</name>
-				<username>eplus</username>
-				<password>gprs</password>
 			</apn>
 			<apn value="mms.eplus.de">
 				<usage type="mms"/>
@@ -3247,6 +3346,24 @@ conceived.
 				<password>gprs</password>
 				<dns>212.23.97.2</dns>
 				<dns>212.23.97.3</dns>
+			</apn>
+		</gsm>
+	</provider>
+	<provider>
+		<name>Lycamobile</name>
+		<gsm>
+			<network-id mcc="262" mnc="43"/>
+			<balance-check>
+				<ussd>*131#</ussd>
+			</balance-check>
+			<balance-top-up>
+				<ussd replacement="CODE">*131*CODE#</ussd>
+			</balance-top-up>
+			<apn value="data.lycamobile.de">
+				<plan type="prepaid"/>
+				<usage type="internet"/>
+				<username>lmde</username>
+				<password>plus</password>
 			</apn>
 		</gsm>
 	</provider>
@@ -3556,7 +3673,24 @@ conceived.
 			</apn>
 		</gsm>
 	</provider>
-
+	<provider>
+		<name>Lycamobile</name>
+		<gsm>
+			<network-id mcc="238" mnc="12"/>
+			<balance-check>
+				<ussd>*102#</ussd>
+			</balance-check>
+			<balance-top-up>
+				<ussd replacement="CODE">*101*CODE#</ussd>
+			</balance-top-up>
+			<apn value="data.lycamobile.dk">
+				<plan type="prepaid"/>
+				<usage type="internet"/>
+				<username>lmdk</username>
+				<password>plus</password>
+			</apn>
+		</gsm>
+	</provider>
 	<!-- http://www.ice-net.dk/mobiltbredbaand.php -->
 	<provider>
 		<name>ice.net (Nordisk Mobiltelefon)</name>
@@ -4051,6 +4185,24 @@ conceived.
 			<apn value="lowi.private.omv.es">
 				<plan type="postpaid"/>
 				<usage type="internet"/>
+			</apn>
+		</gsm>
+	</provider>
+	<provider>
+		<name>Lycamobile</name>
+		<gsm>
+			<network-id mcc="214" mnc="25"/>
+			<balance-check>
+				<ussd>*221#</ussd>
+			</balance-check>
+			<balance-top-up>
+				<ussd replacement="CODE">*221*CODE#</ussd>
+			</balance-top-up>
+			<apn value="data.lycamobile.es">
+				<plan type="prepaid"/>
+				<usage type="internet"/>
+				<username>lmes</username>
+				<password>plus</password>
 			</apn>
 		</gsm>
 	</provider>
@@ -4617,6 +4769,24 @@ conceived.
 		</gsm>
 	</provider>
 	<provider>
+		<name>Lycamobile</name>
+		<gsm>
+			<network-id mcc="208" mnc="25"/>
+			<balance-check>
+				<ussd>*131#</ussd>
+			</balance-check>
+			<balance-top-up>
+				<ussd replacement="CODE">*131*CODE#</ussd>
+			</balance-top-up>
+			<apn value="data.lycamobile.fr">
+				<plan type="prepaid"/>
+				<usage type="internet"/>
+				<username>lmfr</username>
+				<password>plus</password>
+			</apn>
+		</gsm>
+	</provider>
+	<provider>
 		<name>Orange</name>
 		<gsm>
 			<network-id mcc="208" mnc="01"/>
@@ -4787,6 +4957,24 @@ conceived.
 				<usage type="internet"/>
 				<username>bt</username>
 				<password>bt</password>
+			</apn>
+		</gsm>
+	</provider>
+	<provider>
+		<name>Lycamobile</name>
+		<gsm>
+			<network-id mcc="234" mnc="26"/>
+			<balance-check>
+				<ussd>*131#</ussd>
+			</balance-check>
+			<balance-top-up>
+				<ussd replacement="CODE">*131*CODE#</ussd>
+			</balance-top-up>
+			<apn value="data.lycamobile.co.uk">
+				<plan type="prepaid"/>
+				<usage type="internet"/>
+				<username>lmuk</username>
+				<password>plus</password>
 			</apn>
 		</gsm>
 	</provider>
@@ -5549,13 +5737,37 @@ conceived.
 		</gsm>
 	</provider>
 	<provider>
-		<name>Three</name>
+		<name>3</name>
 		<gsm>
 			<network-id mcc="454" mnc="03"/>
 			<network-id mcc="454" mnc="04"/>
 			<apn value="mobile.three.com.hk">
 				<plan type="postpaid"/>
 				<usage type="internet"/>
+				<name>3G</name>
+			</apn>
+			<apn value="mobile.lte.three.com.hk">
+				<plan type="postpaid"/>
+				<usage type="internet"/>
+				<name>4G LTE</name>
+			</apn>
+		</gsm>
+	</provider>
+	<provider>
+		<name>Lycamobile</name>
+		<gsm>
+			<network-id mcc="454" mnc="23"/>
+			<balance-check>
+				<ussd>*131#</ussd>
+			</balance-check>
+			<balance-top-up>
+				<ussd replacement="CODE">*131*CODE#</ussd>
+			</balance-top-up>
+			<apn value="data.lycamobile.hk">
+				<plan type="prepaid"/>
+				<usage type="internet"/>
+				<username>lmhk</username>
+				<password>plus</password>
 			</apn>
 		</gsm>
 	</provider>
@@ -5972,6 +6184,24 @@ conceived.
 
 <!-- Ireland -->
 <country code="ie">
+	<provider>
+		<name>Lycamobile</name>
+		<gsm>
+			<network-id mcc="272" mnc="13"/>
+			<balance-check>
+				<ussd>*131#</ussd>
+			</balance-check>
+			<balance-top-up>
+				<ussd replacement="CODE">*131*CODE#</ussd>
+			</balance-top-up>
+			<apn value="data.lycamobile.ie">
+				<plan type="prepaid"/>
+				<usage type="internet"/>
+				<username>lmie</username>
+				<password>plus</password>
+			</apn>
+		</gsm>
+	</provider>
 	<provider>
 		<name>O2</name>
 		<gsm>
@@ -6828,7 +7058,7 @@ conceived.
 		<name>Síminn</name>
 		<gsm>
 			<network-id mcc="274" mnc="01"/>
-			<apn value="wap.simi.is">
+			<apn value="internet">
 				<plan type="postpaid"/>
 				<usage type="internet"/>
 				<dns>194.105.224.1</dns>
@@ -6854,6 +7084,11 @@ conceived.
 				<plan type="postpaid"/>
 				<usage type="internet"/>
 				<name>Mobile Internet</name>
+			</apn>
+			<apn value="web.omnitel.it">
+				<plan type="postpaid"/>
+				<usage type="internet"/>
+				<name>Vodafone Internet Key</name>
 			</apn>
 			<apn value="web.omnitel.it">
 				<plan type="postpaid"/>
@@ -7030,6 +7265,24 @@ conceived.
 				<plan type="prepaid"/>
 				<usage type="internet"/>
 				<name>Tiscali Internet</name>
+			</apn>
+		</gsm>
+	</provider>
+	<provider>
+		<name>Lycamobile</name>
+		<gsm>
+			<network-id mcc="222" mnc="35"/>
+			<balance-check>
+				<ussd>*131#</ussd>
+			</balance-check>
+			<balance-top-up>
+				<ussd replacement="CODE">*131*CODE#</ussd>
+			</balance-top-up>
+			<apn value="data.lycamobile.it">
+				<plan type="prepaid"/>
+				<usage type="internet"/>
+				<username>lmit</username>
+				<password>plus</password>
 			</apn>
 		</gsm>
 	</provider>
@@ -7392,29 +7645,6 @@ conceived.
 			</apn>
 		</gsm>
 	</provider>
-	<provider>
-		<name>FONEX</name>
-		<cdma>
-			<username>cdma</username>
-			<password>cdma</password>
-		</cdma>
-	</provider>
-	<provider>
-		<name>nexi (mir+kg)</name>
-		<name xml:lang="ru">Зона Мир+КГ</name>
-		<cdma>
-			<username>555@mir</username>
-			<password>555</password>
-		</cdma>
-	</provider>
-	<provider>
-		<name>nexi (kg)</name>
-		<name xml:lang="ru">Зона КГ</name>
-		<cdma>
-			<username>999@kg</username>
-			<password>999</password>
-		</cdma>
-	</provider>
 </country>
 
 <!-- Cambodia -->
@@ -7559,27 +7789,35 @@ conceived.
 <!-- Korea, Republic of -->
 <country code="kr">
 	<provider>
-		<name>KTF</name>
+		<name>KT</name>
 		<gsm>
 			<network-id mcc="450" mnc="08"/>
-			<apn value="hsdpa-internet.ktfwing.com">
-				<plan type="postpaid"/>
+			<apn value="alwayson.ktfwing.com">
 				<usage type="internet"/>
+				<name>KT 3G</name>
+			</apn>
+			<apn value="lte.ktfwing.com">
+				<usage type="internet"/>
+				<name>KT LTE</name>
+			</apn>
+			<apn value="lte.ktfwing.com">
+				<usage type="mms"/>
+				<name>KT MMS</name>
+				<mmsc>http://mmsc.ktfwing.com:9082</mmsc>
 			</apn>
 		</gsm>
-		<cdma>
-			<!-- cid: "016" -->
-			<username>ktf</username>
-			<password>ktf</password>
-		</cdma>
 	</provider>
 	<provider>
-		<name>LGUPlus</name>
+		<name>LG U+</name>
 		<gsm>
 			<network-id mcc="450" mnc="06"/>
 			<apn value="internet.lguplus.co.kr">
-				<plan type="postpaid"/>
 				<usage type="internet"/>
+			</apn>
+			<apn value="internet.lguplus.co.kr">
+				<usage type="mms"/>
+				<name>LG U+ MMS</name>
+				<mmsc>http://omammsc.uplus.co.kr:9084</mmsc>
 			</apn>
 		</gsm>
 		<cdma>
@@ -7593,14 +7831,18 @@ conceived.
 		</cdma>
 	</provider>
 	<provider>
-		<name>SKTelecom</name>
+		<name>SK Telecom</name>
 		<gsm>
 			<network-id mcc="450" mnc="05"/>
-			<apn value="nate.sktelecom.com">
-				<plan type="postpaid"/>
+			<apn value="web.sktelecom.com">
 				<usage type="internet"/>
+				<name>SKT 3G</name>
 			</apn>
-			<apn value="mms.sktelecom.com">
+			<apn value="lte.sktelecom.com">
+				<usage type="internet"/>
+				<name>SKT LTE</name>
+			</apn>
+			<apn value="lte.sktelecom.com">
 				<usage type="mms"/>
 				<name>SKT MMS</name>
 				<mmsc>http://omms.nate.com:9082/oma_mms</mmsc>
@@ -7721,18 +7963,14 @@ conceived.
 		</gsm>
 	</provider>
 	<provider>
-		<name>Pathword</name>
-		<cdma>
-			<username>Pathword</username>
-			<password>Pathword</password>
-		</cdma>
-	</provider>
-	<provider>
-		<name>Dalacom</name>
-		<cdma>
-			<username>Dalacom</username>
-			<password>Dalacom</password>
-		</cdma>
+		<name>Altel 4G</name>
+		<gsm>
+			<network-id mcc="401" mnc="77"/>
+			<apn value="internet">
+				<plan type="postpaid"/>
+				<usage type="internet"/>
+			</apn>
+		</gsm>
 	</provider>
 </country>
 
@@ -8598,6 +8836,24 @@ conceived.
 			</apn>
 		</gsm>
 	</provider>
+	<provider>
+		<name>Lycamobile</name>
+		<gsm>
+			<network-id mcc="294" mnc="04"/>
+			<balance-check>
+				<ussd>*122#</ussd>
+			</balance-check>
+			<balance-top-up>
+				<ussd replacement="CODE">*122*CODE#</ussd>
+			</balance-top-up>
+			<apn value="data.lycamobile.mk">
+				<plan type="prepaid"/>
+				<usage type="internet"/>
+				<username>lmde</username>
+				<password>plus</password>
+			</apn>
+		</gsm>
+	</provider>
 </country>
 
 <!-- Malta -->
@@ -9134,6 +9390,12 @@ conceived.
 		<name>Lycamobile</name>
 		<gsm>
 			<network-id mcc="204" mnc="09"/>
+			<balance-check>
+				<ussd>*101#</ussd>
+			</balance-check>
+			<balance-top-up>
+				<ussd replacement="CODE">*101*CODE#</ussd>
+			</balance-top-up>
 			<apn value="data.lycamobile.nl">
 				<plan type="prepaid"/>
 				<usage type="internet"/>
@@ -9544,6 +9806,24 @@ conceived.
 			<apn value="internet.phonero.no">
 				<plan type="postpaid"/>
 				<usage type="internet"/>
+			</apn>
+		</gsm>
+	</provider>
+	<provider>
+		<name>Lycamobile</name>
+		<gsm>
+			<network-id mcc="242" mnc="23"/>
+			<balance-check>
+				<ussd>*150#</ussd>
+			</balance-check>
+			<balance-top-up>
+				<ussd replacement="CODE">*150*CODE#</ussd>
+			</balance-top-up>
+			<apn value="data.lyca-mobile.no">
+				<plan type="prepaid"/>
+				<usage type="internet"/>
+				<username>lmno</username>
+				<password>plus</password>
 			</apn>
 		</gsm>
 	</provider>
@@ -10363,6 +10643,24 @@ conceived.
 			<password>CDMA</password>
 		</cdma>
 	</provider>
+	<provider>
+		<name>Lycamobile</name>
+		<gsm>
+			<network-id mcc="260" mnc="09"/>
+			<balance-check>
+				<ussd>*131#</ussd>
+			</balance-check>
+			<balance-top-up>
+				<ussd replacement="CODE">*131*CODE#</ussd>
+			</balance-top-up>
+			<apn value="data.lycamobile.pl">
+				<plan type="prepaid"/>
+				<usage type="internet"/>
+				<username>lmpl</username>
+				<password>plus</password>
+			</apn>
+		</gsm>
+	</provider>
 </country>
 
 <!-- Portugal -->
@@ -10431,6 +10729,24 @@ conceived.
 				<usage type="internet"/>
 				<name>GPRS</name>
 				<dns>194.79.69.129</dns>
+			</apn>
+		</gsm>
+	</provider>
+	<provider>
+		<name>Lycamobile</name>
+		<gsm>
+			<network-id mcc="268" mnc="04"/>
+			<balance-check>
+				<ussd>*123#</ussd>
+			</balance-check>
+			<balance-top-up>
+				<ussd replacement="CODE">*#123*CODE#</ussd>
+			</balance-top-up>
+			<apn value="data.lycamobile.pt">
+				<plan type="prepaid"/>
+				<usage type="internet"/>
+				<username>lmpt</username>
+				<password>plus</password>
 			</apn>
 		</gsm>
 	</provider>
@@ -10741,6 +11057,25 @@ conceived.
 			</apn>
 		</gsm>
 	</provider>
+	<provider>
+		<name>Lycamobile</name>
+		<gsm>
+			<network-id mcc="226" mnc="16"/>
+			<balance-check>
+				<ussd>*131#</ussd>
+			</balance-check>
+			<balance-top-up>
+				<ussd replacement="CODE">*131*CODE#</ussd>
+			</balance-top-up>
+			<apn value="data.lycamobile.ro">
+				<plan type="prepaid"/>
+				<usage type="internet"/>
+				<username>lmro</username>
+				<password>plus</password>
+			</apn>
+		</gsm>
+	</provider>
+
 </country>
 
 <!-- Serbia -->
@@ -11490,6 +11825,24 @@ conceived.
 			</apn>
 		</gsm>
 	</provider>
+	<provider>
+		<name>Lycamobile</name>
+		<gsm>
+			<network-id mcc="240" mnc="12"/>
+			<balance-check>
+				<ussd>*102#</ussd>
+			</balance-check>
+			<balance-top-up>
+				<ussd replacement="CODE">*101*CODE#</ussd>
+			</balance-top-up>
+			<apn value="data.lycamobile.se">
+				<plan type="prepaid"/>
+				<usage type="internet"/>
+				<username>lmse</username>
+				<password>plus</password>
+			</apn>
+		</gsm>
+	</provider>
 </country>
 
 <!-- Singapore -->
@@ -11966,6 +12319,25 @@ conceived.
 				<password>mms</password>
 				<mmsc>http://mms</mmsc>
 				<mmsproxy>213.150.186.106:8080</mmsproxy>
+			</apn>
+		</gsm>
+	</provider>
+	<provider>
+		<!-- MVNO operating on Tunisie Télécom's network -->
+		<name>Lycamobile</name>
+		<gsm>
+			<network-id mcc="605" mnc="02"/>
+			<balance-check>
+				<ussd>*143#</ussd>
+			</balance-check>
+			<balance-top-up>
+				<ussd replacement="CODE">*143*CODE#</ussd>
+			</balance-top-up>
+			<apn value="data.lycamobile.tn">
+				<plan type="prepaid"/>
+				<usage type="internet"/>
+				<username>lmtn</username>
+				<password>plus</password>
 			</apn>
 		</gsm>
 	</provider>
@@ -13364,6 +13736,22 @@ conceived.
 			</apn>
 		</gsm>
 	</provider>
+	<provider>
+		<name>Lycamobile</name>
+		<gsm>
+			<network-id mcc="311" mnc="960"/>
+			<balance-check>
+				<ussd>*611#</ussd>
+			</balance-check>
+			<balance-top-up>
+				<ussd replacement="CODE">*611*CODE#</ussd>
+			</balance-top-up>
+			<apn value="data.lycamobile.com">
+				<plan type="prepaid"/>
+				<usage type="internet"/>
+			</apn>
+		</gsm>
+	</provider>
 </country>
 
 <!-- Uruguay -->
@@ -13459,22 +13847,22 @@ conceived.
 		</gsm>
 	</provider>
 	<provider>
-		<name>MTS (Uzdunrobita)</name>
-		<gsm>
-			<network-id mcc="434" mnc="07"/>
-			<apn value="net.mts.uz">
-				<plan type="postpaid"/>
-				<usage type="internet"/>
-				<username>mts</username>
-				<password>mts</password>
-			</apn>
-		</gsm>
-	</provider>
-	<provider>
 		<name>Ucell</name>
 		<gsm>
 			<network-id mcc="434" mnc="05"/>
 			<apn value="internet">
+				<username/>
+				<password/>
+			</apn>
+		</gsm>
+	</provider>
+    <provider>
+		<name>UMS</name>
+		<gsm>
+			<network-id mcc="434" mnc="07"/>
+			<apn value="net.ums.uz">
+				<plan type="postpaid"/>
+				<usage type="internet"/>
 				<username/>
 				<password/>
 			</apn>
