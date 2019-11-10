@@ -1,0 +1,576 @@
+mobile-broadband-provider-info (20190618-2) unstable; urgency=medium
+
+  * Add build dependency on xsltproc
+
+ -- Graham Inggs <ginggs@debian.org>  Tue, 13 Aug 2019 14:56:32 +0000
+
+mobile-broadband-provider-info (20190618-1) unstable; urgency=medium
+
+  [ Ondřej Nový ]
+  * d/copyright: Use https protocol in Format field
+  * d/control: Remove trailing whitespaces
+  * d/control: Set Vcs-* to salsa.debian.org
+
+  [ Graham Inggs ]
+  * Adopt the package (Closes: #884619, #932331)
+  * Switch to debhelper 12
+  * Set Rules-Requires-Root: no
+  * Update debian/watch and drop get-orig-source target
+  * New upstream release (Closes: #929633)
+  * Do not ship NEWS file no longer provided by upstream
+  * Drop Lintian overrides no longer needed
+  * Update debian/copyright
+  * Bump Standards-Version to 4.4.0, no changes
+
+ -- Graham Inggs <ginggs@debian.org>  Tue, 13 Aug 2019 10:28:12 +0000
+
+mobile-broadband-provider-info (20170903-1) unstable; urgency=medium
+
+  * Merge latest changes from git:
+    - add Lycamobile APN settings
+    - dtd: add initial attach apn type
+    - italy: add Vodafone Internet Key
+    - ko: update for Korean operators
+    - cz: add Czech "MOBIL.CZ" provider (MVNO on T-Mobile)
+    - bm: add provider Bermuda Cell One
+    - is: use correct APN for Siminn Iceland
+    - kg: removes defunct operators FONEX and nexi for Kyrgyzstan
+    - kz: remove defunct CDMA operators with new GSM operator Altel 4G
+      for Kazakhstan
+    - de: remove AldiTalk 24h flatrate
+    - hk: update 3HK
+    - uz: change MTS to UMS
+  * update standards-version no other changes
+  * update year in copyright file
+  * use secure VCS URL's
+
+ -- Bhavani Shankar <bhavi@ubuntu.com>  Sun, 03 Sep 2017 10:03:28 +0530
+
+mobile-broadband-provider-info (20161204-1) unstable; urgency=low
+
+  * Ack NMU. Thanks Martin.
+  * Return Back to Debian (Closes: #846814)
+  * Merge latest changes from git:
+    - no: add Phonero APN
+    - mt: add APN for Melita Mobile
+    - cz: add O2 balance check and top-up
+    - bd: add data for Bangladesh providers
+    - fi: update Finland provider DNA
+    - nl: t-mobile update
+    - nl: KPN update
+    - cl: add extra mnc to Movistar Chile Network
+    - build: Run configure from the builddir
+  * Update year in debian/copyright
+
+ -- Bhavani Shankar <bhavi@ubuntu.com>  Sun, 04 Dec 2016 08:39:36 +0530
+
+mobile-broadband-provider-info (20151214-0.1) unstable; urgency=low
+
+  * Non-maintainer upload.
+  * Put packaging into Git repo.
+  * New upstream version (Closes: #810978).
+  * Add one sentence to description that mentions APN (Closes: #698644).
+  * Add "Multi-Arch: foreign" tag (Closes: #813267).
+  * Add build-dep on dh-autoreconf.
+  * Bump standards version, no change.
+  * Update debian/copyright.
+  * Add debian/lintian-overrides.
+
+ -- W. Martin Borgert <debacle@debian.org>  Wed, 03 Aug 2016 21:19:23 +0000
+
+mobile-broadband-provider-info (20140317-1) unstable; urgency=low
+
+  [Bhavani Shankar]
+  * Merge upstream version 20140317 from git:
+    - Add MMS information.
+    - README: Update link to correct documentation.
+    - KG: Add balance-check code for Beeline (Kyrgyzstan).
+    - US: Add "fast.t-mobile.com" APN for T-Mobile.
+    - CZ: Add O2 prepaid plans (like NA!VYBER).
+    - AR: Personal Argentina: Merge 2 APNs into same provider.
+    - AR: Movistar Argentina: Add 'Internet' credentials to APN.
+    - AR: Movistar Argentina: Provide name for the WAP APN.
+    - GL: Add Tele Greenland A/S support.
+    - CZ: Add balance check ussd code for vodafone.cz.
+    - SD: Update balance-check and balance-top-up for Zain Sudan.
+    - MD: Add Moldovan provider "Unité" and remove "Eventis".
+    - US: Add "pta" APN for AT&T.
+  * Bumping up standards in debian/control
+  * Updating the year in debian/copyright
+
+  [John Paul Adrian Glaubitz]
+  * Clean up debian/changelog.
+  * Update upstream homepage in debian/control and debian/copyright.
+  * Bump debhelper version in debian/control and debian/compat to 9.
+
+ -- Bhavani Shankar <bhavi@ubuntu.com>  Mon, 17 Mar 2014 23:21:28 +0530
+
+mobile-broadband-provider-info (20130915-1) unstable; urgency=low
+
+  * Merge upstream version 20130915 from git:
+    - FI: Add DNA Finland APN settings.
+    - AR: Add support for new APN in Personal Argentina.
+    - CA: Add extra APN for Videotron, data on mobile phones.
+    - US: Add Straight Talk MVNO in US.
+
+ -- Bhavani Shankar <bhavi@ubuntu.com>  Sun, 15 Sep 2013 18:48:27 +0530
+
+mobile-broadband-provider-info (20130903-1) unstable; urgency=low
+
+  * Merge upstream version 20130903 from git:
+    - KR: Add GSM network support for LGUPlus.
+    - IN: Add "mtnl.net" APN for MTNL.
+    - ES: Add Mobile APN for Pepephone (gprsmov.pepephone.com).
+
+ -- Bhavani Shankar <bhavi@ubuntu.com>  Tue, 03 Sep 2013 21:45:59 +0530
+
+mobile-broadband-provider-info (20130506-1) unstable; urgency=low
+
+  * Merge upstream version 20130506 from git:
+    - AT: Add balance check code for tele.ring Austria.
+    - NG: Add balance-check and top-up codes for Zain Nigeria.
+    - NG: Update Nigeria providers data.
+    - IT: Add Bip MVNO for Italy.
+    - BF: Add Burkina Faso country and Airtel network.
+
+ -- Bhavani Shankar <bhavi@ubuntu.com>  Mon, 06 May 2013 19:56:15 +0530
+
+mobile-broadband-provider-info (20130312-1) unstable; urgency=high
+
+  * Merge upstream version 20130312 from git:
+    - CO: Add Virgin Mobile, UNE LTE 4G and rename Comcel to Claro. (LP: #1128627)
+    - AM: Add Karabakh Telecom (Armenia).
+    - MM: Add Myanmar and MPT GSM operator. (LP: #1079510)
+    - IL: Add Home Cellular, Golan Telecom, Hot Mobile, Rami Levi and
+          YouPhone 3G support.
+    - TZ: Add support for tiGO provider in Tanzania. (LP: #1093702)
+    - KE: Add prepaid and balance info for Safaricom.
+    - DE: Add a voicemail number for T-Mobile Germany.
+    - NO: Update branding of Network Norway and Lebara (now MyCall) and
+          remove SheTalks support.
+    - UK: Update DNS for Three UK.
+    - DK: Add "data.dk" APN for OiSTER DK.
+    - US: Add missing T-Mobile's MNC 026.
+  * Drop Debian patch for Three UK DNS change, merged upstream.
+  * Set urgency=high since it affects multiple users.
+
+ -- Bhavani Shankar <bhavi@ubuntu.com>  Tue, 12 Mar 2013 11:10:21 +0530
+
+mobile-broadband-provider-info (20130121-1) unstable; urgency=low
+
+  * Merge upstream version 20130121 from git:
+    - UK: Add TalkTalk provider support.
+  * UK: Add patch to update Three UK 3 provider's secondary DNS to
+        reflect latest ones (Forwarded upstream as bgo #692184).
+
+ -- Bhavani Shankar <bhavi@ubuntu.com>  Mon, 21 Jan 2013 15:10:47 +0530
+
+mobile-broadband-provider-info (20121112-1) experimental; urgency=low
+
+  * Upload to experimental due to Wheezy feature freeze.
+  * Merge upstream version 20121112 from git:
+    - RU: Add balance-check codes for some Russian providers (MTS and U-Tel).
+    - GT: Add Movistar Guatemala support.
+    - FT: Add 'internetneuf' APN for SFR (older Neuf Telecom's plan).
+    - DE: Add balance check and top-up codes for Congstar Germany.
+    - TR: Add "mgb" APN for Turkcell operator.
+    - MG: Add Madagascar and its providers Airtel, Orange and Telma.
+    - AT: Add VOLmobil Austria support, MVNO on T-Mobile's network.
+    - NL: Add "Galaxy" operator support in Netherlands, MVNO on KPN.
+    - ML: Add Malitel 3G+ GSM support, add names for Orange.
+    - ES: Add "telefonica.es" APN for Movistar Spain.
+    - NO: Add Norwegian Chess MVNO, operating on NetCom's network.
+    - UK: Update information for giffgaff network.
+    - UA: Change Ukrainian "Life" to "life:)" for correct branding.
+    - SD: Add MTN and Sudani providers in Sudan.
+    - autogen.sh: Honor NOCONFIGURE=1.
+  * Bump standards-version to 3.9.4
+
+ -- Bhavani Shankar <bhavi@ubuntu.com>  Mon, 12 Nov 2012 20:09:54 +0530
+
+mobile-broadband-provider-info (20120708-1) unstable; urgency=low
+
+  * Merge upstream version 20120708 from git:
+    - KE: Change provider name from celtel to Airtel. (LP: #912728)
+    - DK: Add provider Onfone Internet DK. (LP: #929448)
+    - AU: Add Telstra BigPond plan. (LP: #941773)
+    - IN: Add support for Reliance 3G provider. (LP: #892937)
+    - LA: Add Unitel, Beeline (former Tigo), and Lao Telecom. (LP: #907674)
+    - CN: Update APN for China Unicom from "uninet" to "3gnet".
+    - TR: Update Vodafone and KKTC Telsim data.
+    - KZ: Rename Neo to Tele2. (LP: #972494)
+    - PE: Add Claro provider plan.
+    - SK: Rename T-Mobile to Slovak Telekom.
+    - GH: Update Ghana providers Vodafone, Airtel, GloGhana and Expresso.
+    - NL: Add Lebara and Lycamobile operators.
+    - BE: Add Mobile Vikings virtual operator.
+    - BY: Add balance check codes for Belarusian providers.
+    - Update maintainers list.
+    - Add description in doap file.
+    - Fix missing "@" in .pc file template.
+
+ -- Bhavani Shankar <bhavi@ubuntu.com>  Sun, 08 Jul 2012 22:08:46 +0530
+
+mobile-broadband-provider-info (20120402-1) unstable; urgency=high
+
+  * Merge upstream version 20120402 from git:
+     - RU: Update Russian Megafon provider. (LP: #952184)
+	   This change justifies the urgency=high setting.
+     - NL: T-mobile is marked as default now.
+     - PK: Add support for WorldCall Wireless. (LP: #939828)
+  * Cosmetic changes to debian/copyright. Thanks Angel Abad!
+
+ -- Bhavani Shankar <bhavi@ubuntu.com>  Mon, 02 Apr 2012 20:49:56 +0530
+
+mobile-broadband-provider-info (20120307-1) unstable; urgency=low
+
+  * Merge upstream version 20120307 from git:
+    - IN: Add SIDs for MTS MBlaze and Tata Indicom Photon+.
+      (LP: #892693, LP: #903525)
+    - IN: Add support for new APNs for AIRCEL and DOCOMO
+    - IN: Remove invalid DNS server entries for Idea Cellular
+    - SE: Update voicemail for Tele2, balance, plan for Comviq Sweden
+    - FI: Add new APN for postpaid with public ip and update DNS servers
+          for Saunalahti Finland
+    - ML: Add Malitel provider and 'internet' APN for Orange in Mali
+    - RW: Add Tigo provider in Rwanda (LP: #497319)
+    - US: Add T-Mobile voicemail number
+    - ET: Add Ethiopia and its Ethio Telecom provider
+    - KE: Update Kenya Safaricom's APN to 'safaricom' (LP: #912725)
+    - ES: Add Spanish "Eroski Móvil" provider
+    - ES: Add MCC/MNC for Eroski Móvi
+    - KH: Add "Smart Mobile" for Cambodia
+    - CH: Fix Swisscom top up code
+    - RU: Add "home.beeline.ru" APN for Beeline Russia
+    - KH: Update Cambodian providers
+    - FR: Add support for Free Mobile
+    - PK: Add support for pctl EVO
+  * Remove autotools-dev from Build-Depends in debian/control.
+  * Update standards to 3.9.3 with the following changes:
+    - Update debian/copyright to copyright format 1.0.
+    - Remove executable bits in debian directory.
+
+ -- Bhavani Shankar <bhavi@ubuntu.com>  Thu, 08 Mar 2012 11:42:55 +0530
+
+mobile-broadband-provider-info (20111113-1) unstable; urgency=low
+
+  * Merge upstream version 20111113 from git:
+    - PL: New providers for Poland (and top-up/balance support). (Closes: #640946)
+    - CO: Add new Columbian providers. (LP: #789684)
+    - TZ: Update Zain Tanzania name to reflect recent branding. (LP: #823384)
+    - OM: Update Oman Mobile APN. (LP: #840600)
+    - KR: Update Korean GSM APNs. (LP: #782271)
+    - UK: Update VirginMobile UK information in the database. (LP: #364400)
+    - UK: Add support for O2 UK. (LP: #342661)
+  * Wrap up Uploaders field (Thanks to paultag for pointing out)
+    and Add Antii to the Uploaders field. Welcome back Antii!
+
+ -- Bhavani Shankar <bhavi@ubuntu.com>  Sun, 13 Nov 2011 18:53:49 +0530
+
+mobile-broadband-provider-info (20110806-1) unstable; urgency=low
+
+  * Merge upstream version 20100806 from git:
+    - CA: Clarify WIND mobile plans.
+    - PT: Fix MCC for portugal.
+    - NL: Add fastinternet and prepaidinternet plans to KPN.
+    - PT: Add ZON provider.
+    - NA: Add namibian providers (LP: #794071)
+    - NL: Rename KPN to KPN Netherlands.
+    - KR: Add gsm network support for KTF and SK Telecom.
+    - UK: Return APN for older Topup and Go SIM cards (Vodafone).
+    - JO: Add orange and zain network support. (LP: #770310)
+    - CH: Remove outdated DNS for sunrise operator.
+    - NO: Add tele2 support. (LP: #805887)
+    - ME: Update T-Mobile APNs.
+    - BA: Amend data for Bosnia & Herzegovina. Thanks to Guido for the report.
+          (Closes: #634207)
+    - DE: Update BILD mobile APN.
+    - DE: Rename some providers such as T-Mobile, CongStar and Vodafone to
+          reflect to recent branding.
+    - Update to Vodafone Mobile Connect.
+    - Group the various APNs into the above headers.
+    - DTD: Mark providers as primary to disambiguate providers with same MPLN.
+    - DTD: Define various APN types such as mms prepaid and WAP.
+
+ -- Bhavani Shankar <bhavi@ubuntu.com>  Sat, 06 Aug 2011 21:43:08 +0530
+
+mobile-broadband-provider-info (20110424-1) unstable; urgency=low
+
+  * Port Ubuntu update to Debian. Thanks Mathieu Trudel-Lapierre!
+  * Add Mathieu Trudel-Lapierre to the list of uploaders.
+  * Merge upstream version 20110424 from git:
+    - DE: Remove username & password from FONIC. (LP: #762075, #653212)
+  * Update standards to 3.9.2, no changes required.
+
+ -- Bhavani Shankar <bhavi@ubuntu.com>  Sun, 24 Apr 2011 19:31:39 +0530
+
+mobile-broadband-provider-info (20110415-0ubuntu1) natty; urgency=low
+
+  * Merge upstream version 20110415 from git:
+    - European provider updates and MCC/MNC additions. (bgo #647776)
+      (LP: #762075, #653212)
+    - UY: Add Ancel Prepaid ADSL APN. (bgo #645356)
+    - SV: Update APN for El Salvador's Movistar.
+    - DE/CH: Add top-up and balance check info for various providers.
+    - DE: Add BILD mobile. (bgo #644795)
+    - AT: Add orange.web APN. (bgo #644795)
+    - DE: Fix username and password for 1&1 Mobile Web APN. (bgo #644795)
+    - AT: Add aonMobile APN. (bgo #644795)
+    - AT: Fix A1 aon.data username. (bgo #644795)
+    - AT: Fix APN for Claro Argentina. (bgo #643844)
+    - GR: Update Cosmote APN. (bgo #644731)
+    - US: Some AT&T updates and APN naming changes.
+    - MW: Add the country and TNM network. (bgo #644093)
+    - RU: Update APN for Tele2 and remove username. (bgo #644198)
+    - DE: Add netzclub. (bgo #643670)
+    - UK: Update Vodafone UK "TopUp and Go" APN.
+    - US: Fix up AT&T APNs. (bgo #642323)
+    - AR: Add provider Arnet. (bgo #642204) (LP: #326958)
+    - PT: Update Kanguru APNs. (bgo #628543) (LP: #511139)
+    - DTD: Add attributes for balance top-up.
+
+ -- Mathieu Trudel-Lapierre <mathieu-tl@ubuntu.com>  Fri, 15 Apr 2011 15:20:27 -0400
+
+mobile-broadband-provider-info (20110218-1) unstable; urgency=low
+
+  * Upload to unstable.
+  * Merge upstream git head 20110218:
+    - ZA: Remove cellc username. (LP: #681287)
+    - ZA: Add support for 8.ta(Telekom).
+
+ -- Bhavani Shankar <bhavi@ubuntu.com>  Mon, 21 Feb 2011 19:55:15 +0530
+
+mobile-broadband-provider-info (20110118-1) experimental; urgency=low
+
+  * The "New Year" release.
+  * Merge upstream version 20110118 from git:
+    - DO: Add Dominican Republic APNs.
+    - EC: Add Movistar Ecuador.
+    - ES: Add Carrefour Móvil, missing mcc/mnc and capitalize some letters.
+    - ID: Add support for various cdma providers such as SMART, Ceria,
+          Fren, Telkom Flexy and Esia.
+    - ID: Update Telkomsel APN.
+    - ID: Add support for Telkomsel flash.
+    - ID: Update settings of Indosat, IM3, Matrix, Mentari providers.
+    - ID: Add support for "3" provider.
+    - ID: Add support for star one.
+    - IN: Add and update BSNL 3G unified APNs. (LP: #673484)
+    - PY: Add support for claro.
+    - CH: Update Orange plans and APNs.
+    - TZ: Add Sasatel and TTCL, add CDMA support for Zantel.
+    - Fix comment formatting.
+  * Update years in debian/copyright.
+
+ -- Bhavani Shankar <bhavi@ubuntu.com>  Tue, 18 Jan 2011 23:05:29 +0530
+
+mobile-broadband-provider-info (20101106-1) unstable; urgency=low
+
+  * Merge upstream version 20101106 from git:
+    - CH: Add Swisscom account balance information.
+    - CZ: Update Czech operators.
+    - JP: Add support for b-mobile. (LP: #667818)
+    - HK: Peoples Mobile now changed to China Telecom.
+    - PC: Spurious cflags bits removed.
+    - PH: Add support for Globe Telecom prepaid. (LP: #647579)
+    - TH: Add TOT 3G support.
+    - US: Fix T-Mobile APNs. (LP: #611748)
+
+ -- Bhavani Shankar <bhavi@ubuntu.com>  Sat, 06 Nov 2010 21:12:13 +0530
+
+mobile-broadband-provider-info (20100930-1) unstable; urgency=low
+
+  * Merge upstream version 20100930 from git:
+    - AU: Add crazy john support. (LP: #599295)
+    - CA: Add mobilicity/Dave support.
+    - DE: Update 1und1 APNs.
+    - IL: Pelephone: Fix erroneous trailing space.
+    - MX: Remove incorrect Telcel DNS server. (LP: #406696)
+
+ -- Bhavani Shankar <bhavi@ubuntu.com>  Thu, 30 Sep 2010 10:35:31 +0530
+
+mobile-broadband-provider-info (20100910-1) unstable; urgency=low
+
+  * Merge upstream version 20090910 from git:
+    - CA: Add Wind mobile broadband APN.
+    - US: Add Verizon SID.
+    - AF: Add Afghan wireless. (LP: #415203)
+    - KE: Add Orange Kenya and fix Econet name. (LP: #619233)
+    - DE: Add 1&1 support and fix plan names. (Closes: #595198)
+    - IT: Add CoopVoce APN and update 3 italy plan names. (LP: #632300)
+    - VN: Add various networks like D-Com, Vinaphone, EVN-Telecom (UMTS)
+          and fix MobiFone APN. (LP: #631376)
+
+ -- Bhavani Shankar <bhavi@ubuntu.com>  Fri, 10 Sep 2010 16:45:05 +0530
+
+mobile-broadband-provider-info (20100824-1) unstable; urgency=low
+
+  * Merge upstream version 20100824 from git:
+    - DK: Add CBB Mobil.
+    - DE: Add Tchibo Mobil.
+    - HR: Add CARNet.
+    - HR: Correct vipnet 3G APN.
+    - AT: Add Internode.
+    - NL: Add a dummy username/password for xs4all.
+    - UAE: Add provider du. (LP: #611658)
+    - ME: Add new T-Mobile APNs. (LP: #396722)
+    - PF: Add Vini. (LP: #344365)
+    - HR: Fix T-Mobile APN. (LP: #525251)
+    - HR: Add Tele2.
+    - PT: Add username/password for TMN. (LP: #372948)
+
+ -- Bhavani Shankar <bhavi@ubuntu.com>  Thu, 26 Aug 2010 09:56:34 +0530
+
+mobile-broadband-provider-info (20100804-1) unstable; urgency=low
+
+  * Merge upstream version 20100804 from git:
+    - Build: Fix .pc file CFLAGS.
+    - Add balance check and voicemail attributes.
+    - API: Fix DTD comment for 'network-id'.
+    - DTD: Add description of various items.
+    - AT: Fix name of Drei (3) hence hopefully fix a regression
+          in Ubuntu.
+    - AR: Add old Claro APN to support N97 mini etc.
+    - IR: Add MCI and Irancell.
+    - PT: Add Clix network support.
+  * Update standards to 3.9.1, no changes required.
+
+ -- Bhavani Shankar <bhavi@ubuntu.com>  Wed, 04 Aug 2010 22:32:35 +0530
+
+mobile-broadband-provider-info (20100716-1) unstable; urgency=low
+
+  * Merge upstream version 20100716 from git:
+    - US: Add support for old Midwest Wireless SIDs.
+    - US: Add support for Mid-Rivers Cellular operator.
+    - US: Add support for MTPCS/CellularOne (former Chinook Wireless) operator.
+    - US: Add support for Alltel GSM roaming-only network.
+    - RW/BI: Add support for various operators like africell and mtn.
+    - HU: Pannon name changed to Telenor.
+    - HU: Add support for invitel operator.
+    - DE: Fix Fonic operator APN.
+
+ -- Bhavani Shankar <bhavi@ubuntu.com>  Fri, 16 Jul 2010 18:57:56 +0530
+
+mobile-broadband-provider-info (20100702-1) unstable; urgency=low
+
+  * Merge upstream version 20100702 from git.
+  * Modify long description in debian/control.
+  * Rename upstream target in debian/rules to get-orig-source.
+  * Update standards to 3.9.0, no changes required.
+
+ -- Bhavani Shankar <bhavi@ubuntu.com>  Fri, 02 Jul 2010 23:01:41 +0530
+
+mobile-broadband-provider-info (20100616-1) unstable; urgency=low
+
+  * Merge upstream version 20060616 from git.
+
+ -- Bhavani Shankar <bhavi@ubuntu.com>  Wed, 16 Jun 2010 19:47:03 +0530
+
+mobile-broadband-provider-info (20100602-1) unstable; urgency=low
+
+  * The "delayed due to exams release".
+  * Merge upstream version 20100602 from git.
+
+ -- Bhavani Shankar <bhavi@ubuntu.com>  Wed, 02 Jun 2010 19:55:45 +0530
+
+mobile-broadband-provider-info (20100507-1) unstable; urgency=low
+
+  * Merge upstream version 20100507 from git.
+
+ -- Bhavani Shankar <bhavi@ubuntu.com>  Fri, 07 May 2010 15:25:40 +0530
+
+mobile-broadband-provider-info (20100422-1) unstable; urgency=low
+
+  * Merge upstream version 20100422 from git.
+
+ -- Bhavani Shankar <bhavi@ubuntu.com>  Thu, 22 Apr 2010 20:04:09 +0530
+
+mobile-broadband-provider-info (20100407-1) unstable; urgency=low
+
+  * Merge upstream version 20100407 from git.
+  * Switch to source format 3.0 (quilt).
+
+ -- Bhavani Shankar <bhavi@ubuntu.com>  Wed, 07 Apr 2010 19:59:50 +0530
+
+mobile-broadband-provider-info (20100316-1) unstable; urgency=low
+
+  * Merge upstream version 20100316 from git.
+
+ -- Bhavani Shankar <bhavi@ubuntu.com>  Tue, 16 Mar 2010 10:38:41 +0530
+
+mobile-broadband-provider-info (20100302-1) unstable; urgency=low
+
+  * Merge upstream version 20100302 from git.
+
+ -- Bhavani Shankar <bhavi@ubuntu.com>  Tue, 02 Mar 2010 21:27:42 +0530
+
+mobile-broadband-provider-info (20100216-1) unstable; urgency=low
+
+  * Merge upstream version 20100216 from git.
+  * Update maintainer's email address.
+  * Update standards to 3.8.4, no changes required.
+  * Update email address in debian/copyright.
+
+ -- Bhavani Shankar <bhavi@ubuntu.com>  Tue, 16 Feb 2010 06:41:04 +0530
+
+mobile-broadband-provider-info (20100126-1) unstable; urgency=low
+
+  * The "New Year" release.
+  * Merging upstream version 20100126 from git.
+  * Update years in debian/copyright.
+
+ -- Bhavani Shankar <right2bhavi@gmail.com>  Tue, 26 Jan 2010 19:59:01 +0530
+
+mobile-broadband-provider-info (20091207-1) unstable; urgency=low
+
+  * Merge upstream version 20091207 from git.
+
+ -- Bhavani Shankar <right2bhavi@gmail.com>  Mon, 07 Dec 2009 15:07:36 +0530
+
+mobile-broadband-provider-info (20090908-1) unstable; urgency=low
+
+  [Kartik Mistry]
+  * Do not use README.Debian, note in debian/watch file is enough.
+  * debian/copyright:
+    - Add missing copyright year for Bhavani Shankar.
+  * debian/control:
+    - Remove cdbs from Build-Depends.
+
+  [Bhavani Shankar]
+  * New maintainer. (Closes: #543851)
+  * Merge upstream version 20090908 from git.
+  * Modify long description of the package, fixes lintian warning.
+  * Add a dummy watch file and a description of the same in README.Debian.
+    (Thanks to Kartik Mistry for the tip!)
+  * Add my name to debian/copyright.
+
+ -- Bhavani Shankar <right2bhavi@gmail.com>  Fri, 11 Sep 2009 09:45:36 +0530
+
+mobile-broadband-provider-info (20090801-2) unstable; urgency=low
+
+  * Orphan package.
+  * Add missing Build-Depends to libxml2-utils. (Closes: #543033).
+  * Update package to standards version 3.8.3.
+  * Remove Vcs-* fields.
+
+ -- Daniel Baumann <daniel@debian.org>  Thu, 27 Aug 2009 08:19:17 +0200
+
+mobile-broadband-provider-info (20090801-1) unstable; urgency=low
+
+  * Merge upstream version 20090801 from git.
+  * Update upstream target in debian/rules.
+
+ -- Daniel Baumann <daniel@debian.org>  Mon, 03 Aug 2009 00:57:02 +0200
+
+mobile-broadband-provider-info (20090601-2) unstable; urgency=low
+
+  * Update package to standards version 3.8.2.
+  * Add misc depends.
+  * Minimize rules file.
+
+ -- Daniel Baumann <daniel@debian.org>  Wed, 29 Jul 2009 23:13:21 +0200
+
+mobile-broadband-provider-info (20090601-1) unstable; urgency=low
+
+  * Initial release.
+
+ -- Daniel Baumann <daniel@debian.org>  Wed, 03 Jun 2009 16:10:00 +0200

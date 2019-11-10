@@ -1,0 +1,25 @@
+Source: mobile-broadband-provider-info
+Section: admin
+Priority: optional
+Maintainer: Graham Inggs <ginggs@debian.org>
+Build-Depends: debhelper-compat (= 12),
+               libxml2-utils,
+               xsltproc
+Standards-Version: 4.4.0
+Rules-Requires-Root: no
+Homepage: https://wiki.gnome.org/Projects/NetworkManager/MobileBroadband/ServiceProviders
+Vcs-Browser: https://salsa.debian.org/debian/mobile-broadband-provider-info
+Vcs-Git: https://salsa.debian.org/debian/mobile-broadband-provider-info.git
+
+Package: mobile-broadband-provider-info
+Architecture: all
+Multi-Arch: foreign
+Depends: ${misc:Depends}
+Description: database of mobile broadband service providers
+ This package contains a database of provider-specific settings of mobile
+ broadband providers in different countries. Its functioning through Network
+ Manager makes it easy for users to choose their mobile broadband service
+ provider.
+ .
+ The database contains information relevant to mobile networks access point
+ usage, such as APN (access point name), username, password, etc.
