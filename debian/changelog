@@ -1,3 +1,9 @@
+mobile-broadband-provider-info (20190618-2ubports0) xenial; urgency=medium
+
+  * Setup deb build for UBports
+
+ -- Florian Leeber <florian@ubports.com>  Fri, 15 Nov 2019 08:56:32 +0000
+
 mobile-broadband-provider-info (20190618-2) unstable; urgency=medium
 
   * Add build dependency on xsltproc
