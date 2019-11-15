@@ -2,7 +2,8 @@ Source: mobile-broadband-provider-info
 Section: admin
 Priority: optional
 Maintainer: Graham Inggs <ginggs@debian.org>
-Build-Depends: libxml2-utils,
+Build-Depends: debhelper (>= 9),
+               libxml2-utils,
                xsltproc
 Standards-Version: 4.4.0
 Rules-Requires-Root: no
