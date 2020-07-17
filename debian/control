@@ -3,6 +3,7 @@ Section: admin
 Priority: optional
 Maintainer: Graham Inggs <ginggs@debian.org>
 Build-Depends: debhelper (>= 9),
+               dh-autoreconf,
                libxml2-utils,
                xsltproc
 Standards-Version: 4.4.0
