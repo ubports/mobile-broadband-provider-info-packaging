@@ -1,4 +1,4 @@
-mobile-broadband-provider-info (20190618-2ubports1) xenial; urgency=medium
+mobile-broadband-provider-info (20200924-ubports1) xenial; urgency=medium
 
   * Setup deb build for UBports
 
