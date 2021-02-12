@@ -1,3 +1,9 @@
+mobile-broadband-provider-info (20210212-ubports1) xenial; urgency=medium
+
+  * Update from upstream (20210212)
+
+ -- Marius Gripsgard <marius@ubports.com>  Fri, 12 Feb 2021 14:59:29 +0100
+
 mobile-broadband-provider-info (20200924-ubports1) xenial; urgency=medium
 
   * Setup deb build for UBports
