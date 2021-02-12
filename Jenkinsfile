@@ -1,2 +1,2 @@
 @Library('ubports-build-tools') _
-buildAndProvideDebianPackage()
+buildAndProvideDebianPackage(/* isArchIndependent */ true)
